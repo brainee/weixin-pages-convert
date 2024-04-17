@@ -1,5 +1,5 @@
 INFO [taroize] parse - 入参 
-option: {"json":"{\"pages\":[\"pages/index/index\",\"pages/logs/logs\"],\"window\":{\"navigationBarTextStyle\":\"black\",\"navigationStyle\":\"custom\"},\"style\":\"v2\",\"rendererOptions\":{\"skyline\":{\"defaultDisplayBlock\":true,\"disableABTest\":true,\"sdkVersionBegin\":\"3.0.0\",\"sdkVersionEnd\":\"15.255.255\"}},\"componentFramework\":\"glass-easel\",\"sitemapLocation\":\"sitemap.json\",\"lazyCodeLoading\":\"requiredComponents\"}","script":"\"use strict\";\n// app.ts\nApp({\n    globalData: {},\n    onLaunch() {\n        // 展示本地存储能力\n        const logs = wx.getStorageSync('logs') || [];\n        logs.unshift(Date.now());\n        wx.setStorageSync('logs', logs);\n        // 登录\n        wx.login({\n            success: res => {\n                console.log(res.code);\n                // 发送 res.code 到后台换取 openId, sessionKey, unionId\n            },\n        });\n    },\n});\n","scriptPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/app.js","path":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram","rootPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram","framework":"React","isApp":true,"logFilePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/taroConvert/.convert/convert.log"} 
+option: {"json":"{\"pages\":[\"pages/index/index\",\"pages/logs/logs\"],\"window\":{\"navigationBarTextStyle\":\"black\",\"navigationStyle\":\"custom\"},\"style\":\"v2\",\"rendererOptions\":{\"skyline\":{\"defaultDisplayBlock\":true,\"disableABTest\":true,\"sdkVersionBegin\":\"3.0.0\",\"sdkVersionEnd\":\"15.255.255\"}},\"resolveAlias\":{\"config/*\":\"config/*\",\"services/*\":\"services/*\",\"model/*\":\"model/*\",\"utils/*\":\"utils/*\",\"components/*\":\"components/*\",\"tdesign-miniprogram/*\":\"miniprogram_npm/tdesign-miniprogram/*\"},\"componentFramework\":\"glass-easel\",\"sitemapLocation\":\"sitemap.json\",\"lazyCodeLoading\":\"requiredComponents\"}","script":"\"use strict\";\n// app.ts\nApp({\n    globalData: {},\n    onLaunch() {\n        // 展示本地存储能力\n        const logs = wx.getStorageSync('logs') || [];\n        logs.unshift(Date.now());\n        wx.setStorageSync('logs', logs);\n        // 登录\n        wx.login({\n            success: res => {\n                console.log(res.code);\n                // 发送 res.code 到后台换取 openId, sessionKey, unionId\n            },\n        });\n    },\n});\n","scriptPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/app.js","path":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram","rootPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram","framework":"React","isApp":true,"logFilePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/taroConvert/.convert/convert.log"} 
 INFO [taroize] parseWXML - 入参 
 dirPath: /Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram 
 parseImport: undefined 
@@ -390,7 +390,7 @@ Taro.getApp
 INFO [taro-cli-convertor] parseAst - 解析CallExpression 
 Component({
   data: {
-    motto: 'Hello World2',
+    motto: 'Hello World1',
     userInfo: {
       avatarUrl: defaultAvatarUrl,
       nickName: ''
@@ -447,7 +447,7 @@ Component({
 INFO [taro-cli-convertor] parseAst - 解析CallExpression 
 cacheOptions.setOptionsToCache({
   data: {
-    motto: 'Hello World2',
+    motto: 'Hello World1',
     userInfo: {
       avatarUrl: defaultAvatarUrl,
       nickName: ''
@@ -583,19 +583,31 @@ class _C extends React.Component {
       canIUseGetUserProfile,
       motto
     } = this.data;
-    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View><View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
+    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+            textAlign: "center",
+            color: "#b9b9b9"
+          }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
   }
 } 
 INFO [taro-cli-convertor] parseAst - 解析MemberExpression 
 this.data 
 INFO [taro-cli-convertor] parseAst - 解析JSXElement 
-<Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View><View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block> 
+<Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+        textAlign: "center",
+        color: "#b9b9b9"
+      }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block> 
 INFO [taro-cli-convertor] parseAst - 解析JSXElement 
 <NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar> 
 INFO [taro-cli-convertor] parseAst - 解析JSXElement 
-<ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View><View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView> 
+<ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+      textAlign: "center",
+      color: "#b9b9b9"
+    }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView> 
 INFO [taro-cli-convertor] parseAst - 解析JSXElement 
-<View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View><View className="usermotto"><Text className="user-motto">{motto}</Text></View></View> 
+<View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+    textAlign: "center",
+    color: "#b9b9b9"
+  }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View> 
 INFO [taro-cli-convertor] parseAst - 解析JSXElement 
 <View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View> 
 INFO [taro-cli-convertor] parseAst - 解析JSXElement 
@@ -637,6 +649,15 @@ INFO [taro-cli-convertor] parseAst - 解析JSXElement
 INFO [taro-cli-convertor] parseAst - 解析MemberExpression 
 userInfo.nickName 
 INFO [taro-cli-convertor] parseAst - 解析JSXElement 
+<View style={{
+  textAlign: "center",
+  color: "#b9b9b9"
+}}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View> 
+INFO [taro-cli-convertor] parseAst - 解析JSXElement 
+<Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading> 
+INFO [taro-cli-convertor] parseAst - 解析JSXElement 
+<Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon> 
+INFO [taro-cli-convertor] parseAst - 解析JSXElement 
 <View className="usermotto"><Text className="user-motto">{motto}</Text></View> 
 INFO [taro-cli-convertor] parseAst - 解析JSXElement 
 <Text className="user-motto">{motto}</Text> 
@@ -663,7 +684,7 @@ INFO [taro-cli-convertor] parseAst - 解析StringLiteral
 INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0' 
 INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
-'Hello World2' 
+'Hello World1' 
 INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
 '' 
 INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
@@ -715,6 +736,26 @@ INFO [taro-cli-convertor] parseAst - 解析StringLiteral
 INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
 "userinfo-nickname" 
 INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
+"center" 
+INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
+"#b9b9b9" 
+INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
+"circular" 
+INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
+"1rem" 
+INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
+"\u52A0\u8F7D\u4E2D..." 
+INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
+"left-icon" 
+INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
+"wr" 
+INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
+"search" 
+INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
+"1rem" 
+INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
+"#bbb" 
+INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
 "usermotto" 
 INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
 "user-motto" 
@@ -731,7 +772,7 @@ Taro.getApp()
 INFO [taro-cli-convertor] convertToOptional - 解析CallExpression 
 cacheOptions.setOptionsToCache({
   data: {
-    motto: 'Hello World2',
+    motto: 'Hello World1',
     userInfo: {
       avatarUrl: defaultAvatarUrl,
       nickName: ''
@@ -787,7 +828,7 @@ cacheOptions.setOptionsToCache({
 }) 
 INFO [taro-cli-convertor] convertToOptional - 解析ObjectProperty 
 data: {
-  motto: 'Hello World2',
+  motto: 'Hello World1',
   userInfo: {
     avatarUrl: defaultAvatarUrl,
     nickName: ''
@@ -797,7 +838,7 @@ data: {
   canIUseNicknameComp: Taro.canIUse('input.type.nickname')
 } 
 INFO [taro-cli-convertor] convertToOptional - 解析ObjectProperty 
-motto: 'Hello World2' 
+motto: 'Hello World1' 
 INFO [taro-cli-convertor] convertToOptional - 解析ObjectProperty 
 userInfo: {
   avatarUrl: defaultAvatarUrl,
@@ -936,7 +977,10 @@ INFO [taro-cli-convertor] convertToOptional - 解析ClassBody
       canIUseGetUserProfile,
       motto
     } = this.data;
-    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View><View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
+    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+            textAlign: "center",
+            color: "#b9b9b9"
+          }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
   }
 } 
 INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression 
@@ -949,7 +993,10 @@ INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression
       canIUseGetUserProfile,
       motto
     } = this.data;
-    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View><View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
+    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+            textAlign: "center",
+            color: "#b9b9b9"
+          }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
   }
 } 
 INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression 
@@ -962,7 +1009,10 @@ INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression
       canIUseGetUserProfile,
       motto
     } = this.data;
-    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View><View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
+    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+            textAlign: "center",
+            color: "#b9b9b9"
+          }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
   }
 } 
 INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression 
@@ -975,7 +1025,10 @@ INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression
       canIUseGetUserProfile,
       motto
     } = this.data;
-    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View><View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
+    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+            textAlign: "center",
+            color: "#b9b9b9"
+          }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
   }
 } 
 INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression 
@@ -988,7 +1041,10 @@ INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression
       canIUseGetUserProfile,
       motto
     } = this.data;
-    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View><View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
+    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+            textAlign: "center",
+            color: "#b9b9b9"
+          }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
   }
 } 
 INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression 
@@ -1001,7 +1057,10 @@ INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression
       canIUseGetUserProfile,
       motto
     } = this.data;
-    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View><View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
+    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+            textAlign: "center",
+            color: "#b9b9b9"
+          }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
   }
 } 
 INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression 
@@ -1014,7 +1073,10 @@ INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression
       canIUseGetUserProfile,
       motto
     } = this.data;
-    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View><View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
+    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+            textAlign: "center",
+            color: "#b9b9b9"
+          }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
   }
 } 
 INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression 
@@ -1027,7 +1089,10 @@ INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression
       canIUseGetUserProfile,
       motto
     } = this.data;
-    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View><View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
+    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+            textAlign: "center",
+            color: "#b9b9b9"
+          }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
   }
 } 
 INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression 
@@ -1040,7 +1105,10 @@ INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression
       canIUseGetUserProfile,
       motto
     } = this.data;
-    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View><View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
+    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+            textAlign: "center",
+            color: "#b9b9b9"
+          }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
   }
 } 
 INFO [taro-cli-convertor] convertToOptional - 解析ObjectProperty 
@@ -1053,6 +1121,10 @@ INFO [taro-cli-convertor] convertToOptional - 解析ObjectProperty
 canIUseGetUserProfile 
 INFO [taro-cli-convertor] convertToOptional - 解析ObjectProperty 
 motto 
+INFO [taro-cli-convertor] convertToOptional - 解析ObjectProperty 
+textAlign: "center" 
+INFO [taro-cli-convertor] convertToOptional - 解析ObjectProperty 
+color: "#b9b9b9" 
 INFO [taro-cli-convertor] convertToOptional - 解析CallExpression 
 withWeapp(cacheOptions.getOptionsFromCache()) 
 INFO [taro-cli-convertor] convertToOptional - 解析CallExpression 
@@ -2794,7 +2866,530 @@ const s = n.toString();
 INFO [taro-cli-convertor] traverseComponents - 开始转换组件 
 /Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/components/navigation-bar/navigation-bar 
 INFO [taroize] parse - 入参 
-option: {"json":"{}","script":"\"use strict\";\n// index.ts\n// 获取应用实例\nconst app = getApp();\nconst defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0';\nComponent({\n    data: {\n        motto: 'Hello World2',\n        userInfo: {\n            avatarUrl: defaultAvatarUrl,\n            nickName: '',\n        },\n        hasUserInfo: false,\n        canIUseGetUserProfile: wx.canIUse('getUserProfile'),\n        canIUseNicknameComp: wx.canIUse('input.type.nickname'),\n    },\n    methods: {\n        // 事件处理函数\n        bindViewTap() {\n            wx.navigateTo({\n                url: '../logs/logs',\n            });\n        },\n        onChooseAvatar(e) {\n            const { avatarUrl } = e.detail;\n            const { nickName } = this.data.userInfo;\n            this.setData({\n                \"userInfo.avatarUrl\": avatarUrl,\n                hasUserInfo: nickName && avatarUrl && avatarUrl !== defaultAvatarUrl,\n            });\n        },\n        onInputChange(e) {\n            const nickName = e.detail.value;\n            const { avatarUrl } = this.data.userInfo;\n            this.setData({\n                \"userInfo.nickName\": nickName,\n                hasUserInfo: nickName && avatarUrl && avatarUrl !== defaultAvatarUrl,\n            });\n        },\n        getUserProfile() {\n            // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗\n            wx.getUserProfile({\n                desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写\n                success: (res) => {\n                    console.log(res);\n                    this.setData({\n                        userInfo: res.userInfo,\n                        hasUserInfo: true\n                    });\n                }\n            });\n        },\n    },\n});\n","scriptPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/index/index.js","wxml":"<!--index.wxml-->\n<navigation-bar title=\"Weixin\" back=\"{{false}}\" color=\"black\" background=\"#FFF\"></navigation-bar>\n<scroll-view class=\"scrollarea\" scroll-y type=\"list\">\n  <view class=\"container\">\n    <view class=\"userinfo\">\n      <block wx:if=\"{{canIUseNicknameComp && !hasUserInfo}}\">\n        <button class=\"avatar-wrapper\" open-type=\"chooseAvatar\" bind:chooseavatar=\"onChooseAvatar\">\n          <image class=\"avatar\" src=\"{{userInfo.avatarUrl}}\"></image>\n        </button>\n        <view class=\"nickname-wrapper\">\n          <text class=\"nickname-label\">昵称</text>\n          <input type=\"nickname\" class=\"nickname-input\" placeholder=\"请输入昵称\" bind:change=\"onInputChange\" />\n        </view>\n      </block>\n      <block wx:elif=\"{{!hasUserInfo}}\">\n        <button wx:if=\"{{canIUseGetUserProfile}}\" bindtap=\"getUserProfile\"> 获取头像昵称 </button>\n        <view wx:else> 请使用2.10.4及以上版本基础库 </view>\n      </block>\n      <block wx:else>\n        <image bindtap=\"bindViewTap\" class=\"userinfo-avatar\" src=\"{{userInfo.avatarUrl}}\" mode=\"cover\"></image>\n        <text class=\"userinfo-nickname\">{{userInfo.nickName}}</text>\n      </block>\n    </view>\n    <view class=\"usermotto\">\n      <text class=\"user-motto\">{{motto}}</text>\n    </view>\n  </view>\n</scroll-view>\n","path":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/index","rootPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram","pluginInfo":{"pluginRoot":"","pluginName":"","pages":{},"pagesMap":{},"publicComponents":{},"entryFilePath":""},"logFilePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/taroConvert/.convert/convert.log","templatePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/index/index.wxml","framework":"React"} 
+option: {"json":"{}","script":"// logs.ts\n// const util = require('../../utils/util.js')\nimport { formatTime } from '../../utils/util';\nComponent({\n    data: {\n        logs: [],\n    },\n    lifetimes: {\n        attached() {\n            this.setData({\n                logs: (wx.getStorageSync('logs') || []).map((log) => {\n                    return {\n                        date: formatTime(new Date(log)),\n                        timeStamp: log\n                    };\n                }),\n            });\n        }\n    },\n});\n","scriptPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs/logs.js","wxml":"<!--logs.wxml-->\n<navigation-bar title=\"查看启动日志\" back=\"{{true}}\" color=\"black\" background=\"#FFF\"></navigation-bar>\n<scroll-view class=\"scrollarea\" scroll-y type=\"list\">\n  <block wx:for=\"{{logs}}\" wx:key=\"timeStamp\" wx:for-item=\"log\">\n    <view class=\"log-item\">{{index + 1}}. {{log.date}}</view>\n  </block>\n</scroll-view>\n","path":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs","rootPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram","pluginInfo":{"pluginRoot":"","pluginName":"","pages":{},"pagesMap":{},"publicComponents":{},"entryFilePath":""},"logFilePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/taroConvert/.convert/convert.log","templatePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs/logs.wxml","framework":"React"} 
+INFO [taroize] parseWXML - 入参 
+dirPath: /Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs 
+parseImport: undefined 
+INFO [taroize] parseNode - 入参 
+tagName: undefined 
+INFO [taroize] parseElement - 进入函数 
+INFO [taroize] parseNode - 入参 
+tagName: block 
+INFO [taroize] parseElement - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"title","value":"查看启动日志"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"back","value":"{{true}}"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"color","value":"black"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"background","value":"#FFF"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseNode - 入参 
+tagName: block 
+INFO [taroize] parseElement - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"class","value":"scrollarea"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"scroll-y","value":null} 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"type","value":"list"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseNode - 入参 
+tagName: scroll-view 
+INFO [taroize] parseElement - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"wx:for","value":"{{logs}}"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"wx:key","value":"timeStamp"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"wx:for-item","value":"log"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseNode - 入参 
+tagName: block 
+INFO [taroize] parseElement - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"class","value":"log-item"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseNode - 入参 
+tagName: view 
+INFO [taroize] parseText - 进入函数 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] createPreWxmlVistor - 入参 
+templates: [object Map] 
+INFO [taroize] templateBfs - 进入函数 
+INFO [taroize] createWxmlVistor - 入参 
+dirPath: /Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs 
+INFO [taroize] createWxmlVistor - 解析JSXElement 
+<Block><NavigationBar title="\u67E5\u770B\u542F\u52A8\u65E5\u5FD7" back={true} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><Block wx:for={logs} wx:key="timeStamp" wx:for-item="log"><View className="log-item">{index + 1 + ". " + log.date}</View></Block></ScrollView></Block> 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+NavigationBar 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+title="\u67E5\u770B\u542F\u52A8\u65E5\u5FD7" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+title 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+back={true} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+back 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+color="black" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+color 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+background="#FFF" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+background 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+NavigationBar 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+ScrollView 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+className="scrollarea" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+className 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+scrollY 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+scrollY 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+type="list" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+type 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+wx:for={logs} 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+key={log.timeStamp} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+key 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+key={log.timeStamp} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+key 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+className="log-item" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+className 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+ScrollView 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXElement 
+<NavigationBar title="\u67E5\u770B\u542F\u52A8\u65E5\u5FD7" back={true} color="black" background="#FFF"></NavigationBar> 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+NavigationBar 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+title="\u67E5\u770B\u542F\u52A8\u65E5\u5FD7" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+title 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+back={true} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+back 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+color="black" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+color 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+background="#FFF" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+background 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+NavigationBar 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+NavigationBar 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+title="\u67E5\u770B\u542F\u52A8\u65E5\u5FD7" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+title 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+back={true} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+back 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+color="black" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+color 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+background="#FFF" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+background 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+NavigationBar 
+INFO [taroize] createWxmlVistor - 解析JSXElement 
+<ScrollView className="scrollarea" scrollY type="list"><Block>{logs.map((log, index) => {
+      return <Block key={log.timeStamp}><View className="log-item">{index + 1 + ". " + log.date}</View></Block>;
+    })}</Block></ScrollView> 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+ScrollView 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+className="scrollarea" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+className 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+scrollY 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+scrollY 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+type="list" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+type 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+key={log.timeStamp} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+key 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+className="log-item" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+className 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+ScrollView 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+ScrollView 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+className="scrollarea" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+className 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+scrollY 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+scrollY 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+type="list" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+type 
+INFO [taroize] createWxmlVistor - 解析JSXElement 
+<Block>{logs.map((log, index) => {
+    return <Block key={log.timeStamp}><View className="log-item">{index + 1 + ". " + log.date}</View></Block>;
+  })}</Block> 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+key={log.timeStamp} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+key 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+className="log-item" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+className 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+logs 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+map 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+log 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+index 
+INFO [taroize] createWxmlVistor - 解析JSXElement 
+<Block key={log.timeStamp}><View className="log-item">{index + 1 + ". " + log.date}</View></Block> 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+key={log.timeStamp} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+key 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+className="log-item" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+className 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+key={log.timeStamp} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+key 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+log 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+timeStamp 
+INFO [taroize] createWxmlVistor - 解析JSXElement 
+<View className="log-item">{index + 1 + ". " + log.date}</View> 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+className="log-item" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+className 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+className="log-item" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+className 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+index 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+log 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+date 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+logs 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+map 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+log 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+index 
+INFO [taroize] createWxmlVistor - 解析JSXElement 
+<Block key={log.timeStamp}><View className="log-item">{index + 1 + ". " + log.date}</View></Block> 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+key={log.timeStamp} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+key 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+className="log-item" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+className 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+key={log.timeStamp} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+key 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+log 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+timeStamp 
+INFO [taroize] createWxmlVistor - 解析JSXElement 
+<View className="log-item">{index + 1 + ". " + log.date}</View> 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+className="log-item" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+className 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+className="log-item" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+className 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+index 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+log 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+date 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+ScrollView 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] parseScript - 入参 
+scriptPath: /Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs/logs.js 
+INFO [taroize] parseCode - 入参
+scriptPath: /Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs/logs.js 
+INFO [taroize] parseScript - 解析Identifier 
+formatTime 
+INFO [taroize] parseScript - 解析Identifier 
+formatTime 
+INFO [taroize] parseScript - 解析CallExpression 
+Component({
+  data: {
+    logs: []
+  },
+  lifetimes: {
+    attached() {
+      this.setData({
+        logs: (wx.getStorageSync('logs') || []).map(log => {
+          return {
+            date: formatTime(new Date(log)),
+            timeStamp: log
+          };
+        })
+      });
+    }
+  }
+}) 
+INFO [taroize] parsePage - 入参 
+pagePath: Component({
+  data: {
+    logs: []
+  },
+  lifetimes: {
+    attached() {
+      this.setData({
+        logs: (wx.getStorageSync('logs') || []).map(log => {
+          return {
+            date: formatTime(new Date(log)),
+            timeStamp: log
+          };
+        })
+      });
+    }
+  }
+}) 
+INFO [taroize] parsePage - 解析CallExpression 
+this.setData({
+  logs: (wx.getStorageSync('logs') || []).map(log => {
+    return {
+      date: formatTime(new Date(log)),
+      timeStamp: log
+    };
+  })
+}) 
+INFO [taroize] parsePage - 解析CallExpression 
+(wx.getStorageSync('logs') || []).map(log => {
+  return {
+    date: formatTime(new Date(log)),
+    timeStamp: log
+  };
+}) 
+INFO [taroize] parsePage - 解析CallExpression 
+wx.getStorageSync('logs') 
+INFO [taroize] parsePage - 解析CallExpression 
+formatTime(new Date(log)) 
+INFO [taroize] parseScript - 解析Identifier 
+Component 
+INFO [taroize] parseScript - 解析Identifier 
+data 
+INFO [taroize] parseScript - 解析Identifier 
+logs 
+INFO [taroize] parseScript - 解析Identifier 
+lifetimes 
+INFO [taroize] parseScript - 解析Identifier 
+attached 
+INFO [taroize] parseScript - 解析BlockStatement 
+{
+  this.setData({
+    logs: (Taro.getStorageSync('logs') || []).map(log => {
+      return {
+        date: formatTime(new Date(log)),
+        timeStamp: log
+      };
+    })
+  });
+} 
+INFO [taroize] parseScript - 解析CallExpression 
+this.setData({
+  logs: (Taro.getStorageSync('logs') || []).map(log => {
+    return {
+      date: formatTime(new Date(log)),
+      timeStamp: log
+    };
+  })
+}) 
+INFO [taroize] parseScript - 解析Identifier 
+setData 
+INFO [taroize] parseScript - 解析Identifier 
+logs 
+INFO [taroize] parseScript - 解析CallExpression 
+(Taro.getStorageSync('logs') || []).map(log => {
+  return {
+    date: formatTime(new Date(log)),
+    timeStamp: log
+  };
+}) 
+INFO [taroize] parseScript - 解析CallExpression 
+Taro.getStorageSync('logs') 
+INFO [taroize] parseScript - 解析Identifier 
+Taro 
+INFO [taroize] parseScript - 解析Identifier 
+getStorageSync 
+INFO [taroize] parseScript - 解析Identifier 
+map 
+INFO [taroize] parseScript - 解析Identifier 
+log 
+INFO [taroize] parseScript - 解析BlockStatement 
+{
+  return {
+    date: formatTime(new Date(log)),
+    timeStamp: log
+  };
+} 
+INFO [taroize] parseScript - 解析Identifier 
+date 
+INFO [taroize] parseScript - 解析CallExpression 
+formatTime(new Date(log)) 
+INFO [taroize] parseScript - 解析Identifier 
+formatTime 
+INFO [taroize] parseScript - 解析Identifier 
+Date 
+INFO [taroize] parseScript - 解析Identifier 
+log 
+INFO [taroize] parseScript - 解析Identifier 
+timeStamp 
+INFO [taroize] parseScript - 解析Identifier 
+log 
+INFO [taroize] parse - 入参 
+option: {"json":"{}","script":"\"use strict\";\n// index.ts\n// 获取应用实例\nconst app = getApp();\nconst defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0';\nComponent({\n    data: {\n        motto: 'Hello World1',\n        userInfo: {\n            avatarUrl: defaultAvatarUrl,\n            nickName: '',\n        },\n        hasUserInfo: false,\n        canIUseGetUserProfile: wx.canIUse('getUserProfile'),\n        canIUseNicknameComp: wx.canIUse('input.type.nickname'),\n    },\n    methods: {\n        // 事件处理函数\n        bindViewTap() {\n            wx.navigateTo({\n                url: '../logs/logs',\n            });\n        },\n        onChooseAvatar(e) {\n            const { avatarUrl } = e.detail;\n            const { nickName } = this.data.userInfo;\n            this.setData({\n                \"userInfo.avatarUrl\": avatarUrl,\n                hasUserInfo: nickName && avatarUrl && avatarUrl !== defaultAvatarUrl,\n            });\n        },\n        onInputChange(e) {\n            const nickName = e.detail.value;\n            const { avatarUrl } = this.data.userInfo;\n            this.setData({\n                \"userInfo.nickName\": nickName,\n                hasUserInfo: nickName && avatarUrl && avatarUrl !== defaultAvatarUrl,\n            });\n        },\n        getUserProfile() {\n            // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗\n            wx.getUserProfile({\n                desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写\n                success: (res) => {\n                    console.log(res);\n                    this.setData({\n                        userInfo: res.userInfo,\n                        hasUserInfo: true\n                    });\n                }\n            });\n        },\n    },\n});\n","scriptPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/index/index.js","wxml":"<!--index.wxml-->\n<navigation-bar title=\"Weixin\" back=\"{{false}}\" color=\"black\" background=\"#FFF\"></navigation-bar>\n<scroll-view class=\"scrollarea\" scroll-y type=\"list\">\n  <view class=\"container\">\n    <view class=\"userinfo\">\n      <block wx:if=\"{{canIUseNicknameComp && !hasUserInfo}}\">\n        <button class=\"avatar-wrapper\" open-type=\"chooseAvatar\" bind:chooseavatar=\"onChooseAvatar\">\n          <image class=\"avatar\" src=\"{{userInfo.avatarUrl}}\"></image>\n        </button>\n        <view class=\"nickname-wrapper\">\n          <text class=\"nickname-label\">昵称</text>\n          <input type=\"nickname\" class=\"nickname-input\" placeholder=\"请输入昵称\" bind:change=\"onInputChange\" />\n        </view>\n      </block>\n      <block wx:elif=\"{{!hasUserInfo}}\">\n        <button wx:if=\"{{canIUseGetUserProfile}}\" bindtap=\"getUserProfile\"> 获取头像昵称 </button>\n        <view wx:else> 请使用2.10.4及以上版本基础库 </view>\n      </block>\n      <block wx:else>\n        <image bindtap=\"bindViewTap\" class=\"userinfo-avatar\" src=\"{{userInfo.avatarUrl}}\" mode=\"cover\"></image>\n        <text class=\"userinfo-nickname\">{{userInfo.nickName}}</text>\n      </block>\n    </view>\n    <view style=\"text-align: center; color: #b9b9b9\" wx:if=\"{{true}}\">\n        <t-loading theme=\"circular\" size=\"40rpx\" text=\"加载中...\" inherit-color />\n        <t-icon slot=\"left-icon\" prefix=\"wr\" name=\"search\" size=\"40rpx\" color=\"#bbb\" />\n      </view>\n    <view class=\"usermotto\">\n      <text class=\"user-motto\">{{motto}}</text>\n    </view>\n  </view>\n</scroll-view>\n","path":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/index","rootPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram","pluginInfo":{"pluginRoot":"","pluginName":"","pages":{},"pagesMap":{},"publicComponents":{},"entryFilePath":""},"logFilePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/taroConvert/.convert/convert.log","templatePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/index/index.wxml","framework":"React"} 
 INFO [taroize] parseWXML - 入参 
 dirPath: /Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/index 
 parseImport: undefined 
@@ -2959,6 +3554,51 @@ INFO [taroize] parseNode - 入参
 tagName: view 
 INFO [taroize] parseElement - 进入函数 
 INFO [taroize] parseAttribute - 入参 
+attr: {"key":"style","value":"text-align: center; color: #b9b9b9"} 
+INFO [taroize] parseStyle - 入参 
+key: style 
+value: text-align: center; color: #b9b9b9 
+INFO [taroize] parseStyleAttrs - 进入函数 
+INFO [taroize] convertStyleAttrs - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"wx:if","value":"{{true}}"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseNode - 入参 
+tagName: view 
+INFO [taroize] parseElement - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"theme","value":"circular"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"size","value":"40rpx"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"text","value":"加载中..."} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"inherit-color","value":null} 
+INFO [taroize] parseNode - 入参 
+tagName: view 
+INFO [taroize] parseElement - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"slot","value":"left-icon"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"prefix","value":"wr"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"name","value":"search"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"size","value":"40rpx"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"color","value":"#bbb"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseNode - 入参 
+tagName: view 
+INFO [taroize] parseElement - 进入函数 
+INFO [taroize] parseAttribute - 入参 
 attr: {"key":"class","value":"usermotto"} 
 INFO [taroize] parseContent - 进入函数 
 INFO [taroize] parseNode - 入参 
@@ -2977,7 +3617,10 @@ INFO [taroize] templateBfs - 进入函数
 INFO [taroize] createWxmlVistor - 入参 
 dirPath: /Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/index 
 INFO [taroize] createWxmlVistor - 解析JSXElement 
-<Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo"><Block wx:if={canIUseNicknameComp && !hasUserInfo}><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block><Block wx:elif={!hasUserInfo}><Button wx:if={canIUseGetUserProfile} onClick={this.getUserProfile}>获取头像昵称</Button><View wx:else>请使用2.10.4及以上版本基础库</View></Block><Block wx:else><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block></View><View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block> 
+<Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo"><Block wx:if={canIUseNicknameComp && !hasUserInfo}><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block><Block wx:elif={!hasUserInfo}><Button wx:if={canIUseGetUserProfile} onClick={this.getUserProfile}>获取头像昵称</Button><View wx:else>请使用2.10.4及以上版本基础库</View></Block><Block wx:else><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block></View><View style={{
+        textAlign: "center",
+        color: "#b9b9b9"
+      }} wx:if={true}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View><View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block> 
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
 Block 
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
@@ -3227,6 +3870,118 @@ View
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
 View 
 INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+style={{
+  textAlign: "center",
+  color: "#b9b9b9"
+}} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+style 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+wx:if={true} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Tloading 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+theme="circular" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+theme 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+size="1rem" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+size 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+text="\u52A0\u8F7D\u4E2D..." 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+text 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+inheritColor 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+inheritColor 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Tloading 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Ticon 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+slot="left-icon" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+slot 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+prefix="wr" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+prefix 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+name="search" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+name 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+size="1rem" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+size 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+color="#bbb" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+color 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Ticon 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+style={{
+  textAlign: "center",
+  color: "#b9b9b9"
+}} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+style 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Tloading 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+theme="circular" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+theme 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+size="1rem" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+size 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+text="\u52A0\u8F7D\u4E2D..." 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+text 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+inheritColor 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+inheritColor 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Tloading 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Ticon 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+slot="left-icon" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+slot 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+prefix="wr" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+prefix 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+name="search" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+name 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+size="1rem" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+size 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+color="#bbb" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+color 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Ticon 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
 className="usermotto" 
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
 className 
@@ -3291,7 +4046,10 @@ background
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
 NavigationBar 
 INFO [taroize] createWxmlVistor - 解析JSXElement 
-<ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View><View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView> 
+<ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+      textAlign: "center",
+      color: "#b9b9b9"
+    }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView> 
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
 ScrollView 
 INFO [taroize] createWxmlVistor - 解析JSXAttribute 
@@ -3434,6 +4192,61 @@ INFO [taroize] createWxmlVistor - 解析JSXIdentifier
 Text 
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
 Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+style={{
+  textAlign: "center",
+  color: "#b9b9b9"
+}} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+style 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Tloading 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+theme="circular" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+theme 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+size="1rem" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+size 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+text="\u52A0\u8F7D\u4E2D..." 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+text 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+inheritColor 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+inheritColor 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Tloading 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Ticon 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+slot="left-icon" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+slot 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+prefix="wr" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+prefix 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+name="search" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+name 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+size="1rem" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+size 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+color="#bbb" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+color 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Ticon 
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
 View 
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
@@ -3471,7 +4284,10 @@ type="list"
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
 type 
 INFO [taroize] createWxmlVistor - 解析JSXElement 
-<View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View><View className="usermotto"><Text className="user-motto">{motto}</Text></View></View> 
+<View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+    textAlign: "center",
+    color: "#b9b9b9"
+  }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View> 
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
 View 
 INFO [taroize] createWxmlVistor - 解析JSXAttribute 
@@ -3600,6 +4416,61 @@ INFO [taroize] createWxmlVistor - 解析JSXIdentifier
 Text 
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
 Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+style={{
+  textAlign: "center",
+  color: "#b9b9b9"
+}} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+style 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Tloading 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+theme="circular" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+theme 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+size="1rem" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+size 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+text="\u52A0\u8F7D\u4E2D..." 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+text 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+inheritColor 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+inheritColor 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Tloading 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Ticon 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+slot="left-icon" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+slot 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+prefix="wr" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+prefix 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+name="search" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+name 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+size="1rem" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+size 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+color="#bbb" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+color 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Ticon 
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
 View 
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
@@ -4189,6 +5060,173 @@ Block
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
 View 
 INFO [taroize] createWxmlVistor - 解析JSXElement 
+<View style={{
+  textAlign: "center",
+  color: "#b9b9b9"
+}}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View> 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+style={{
+  textAlign: "center",
+  color: "#b9b9b9"
+}} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+style 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Tloading 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+theme="circular" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+theme 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+size="1rem" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+size 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+text="\u52A0\u8F7D\u4E2D..." 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+text 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+inheritColor 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+inheritColor 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Tloading 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Ticon 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+slot="left-icon" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+slot 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+prefix="wr" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+prefix 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+name="search" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+name 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+size="1rem" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+size 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+color="#bbb" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+color 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Ticon 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+style={{
+  textAlign: "center",
+  color: "#b9b9b9"
+}} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+style 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+textAlign 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+color 
+INFO [taroize] createWxmlVistor - 解析JSXElement 
+<Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading> 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Tloading 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+theme="circular" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+theme 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+size="1rem" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+size 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+text="\u52A0\u8F7D\u4E2D..." 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+text 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+inheritColor 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+inheritColor 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Tloading 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Tloading 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+theme="circular" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+theme 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+size="1rem" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+size 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+text="\u52A0\u8F7D\u4E2D..." 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+text 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+inheritColor 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+inheritColor 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Tloading 
+INFO [taroize] createWxmlVistor - 解析JSXElement 
+<Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon> 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Ticon 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+slot="left-icon" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+slot 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+prefix="wr" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+prefix 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+name="search" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+name 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+size="1rem" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+size 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+color="#bbb" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+color 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Ticon 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Ticon 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+slot="left-icon" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+slot 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+prefix="wr" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+prefix 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+name="search" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+name 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+size="1rem" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+size 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+color="#bbb" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+color 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Ticon 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXElement 
 <View className="usermotto"><Text className="user-motto">{motto}</Text></View> 
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
 View 
@@ -4257,7 +5295,7 @@ defaultAvatarUrl
 INFO [taroize] parseScript - 解析CallExpression 
 Component({
   data: {
-    motto: 'Hello World2',
+    motto: 'Hello World1',
     userInfo: {
       avatarUrl: defaultAvatarUrl,
       nickName: ''
@@ -4314,7 +5352,7 @@ Component({
 INFO [taroize] parsePage - 入参 
 pagePath: Component({
   data: {
-    motto: 'Hello World2',
+    motto: 'Hello World1',
     userInfo: {
       avatarUrl: defaultAvatarUrl,
       nickName: ''
@@ -7254,526 +8292,3 @@ INFO [taroize] parseScript - 解析Identifier
 data 
 INFO [taroize] parseScript - 解析Identifier 
 delta 
-INFO [taroize] parse - 入参 
-option: {"json":"{}","script":"// logs.ts\n// const util = require('../../utils/util.js')\nimport { formatTime } from '../../utils/util';\nComponent({\n    data: {\n        logs: [],\n    },\n    lifetimes: {\n        attached() {\n            this.setData({\n                logs: (wx.getStorageSync('logs') || []).map((log) => {\n                    return {\n                        date: formatTime(new Date(log)),\n                        timeStamp: log\n                    };\n                }),\n            });\n        }\n    },\n});\n","scriptPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs/logs.js","wxml":"<!--logs.wxml-->\n<navigation-bar title=\"查看启动日志\" back=\"{{true}}\" color=\"black\" background=\"#FFF\"></navigation-bar>\n<scroll-view class=\"scrollarea\" scroll-y type=\"list\">\n  <block wx:for=\"{{logs}}\" wx:key=\"timeStamp\" wx:for-item=\"log\">\n    <view class=\"log-item\">{{index + 1}}. {{log.date}}</view>\n  </block>\n</scroll-view>\n","path":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs","rootPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram","pluginInfo":{"pluginRoot":"","pluginName":"","pages":{},"pagesMap":{},"publicComponents":{},"entryFilePath":""},"logFilePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/taroConvert/.convert/convert.log","templatePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs/logs.wxml","framework":"React"} 
-INFO [taroize] parseWXML - 入参 
-dirPath: /Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs 
-parseImport: undefined 
-INFO [taroize] parseNode - 入参 
-tagName: undefined 
-INFO [taroize] parseElement - 进入函数 
-INFO [taroize] parseNode - 入参 
-tagName: block 
-INFO [taroize] parseElement - 进入函数 
-INFO [taroize] parseAttribute - 入参 
-attr: {"key":"title","value":"查看启动日志"} 
-INFO [taroize] parseContent - 进入函数 
-INFO [taroize] parseAttribute - 入参 
-attr: {"key":"back","value":"{{true}}"} 
-INFO [taroize] parseContent - 进入函数 
-INFO [taroize] parseAttribute - 入参 
-attr: {"key":"color","value":"black"} 
-INFO [taroize] parseContent - 进入函数 
-INFO [taroize] parseAttribute - 入参 
-attr: {"key":"background","value":"#FFF"} 
-INFO [taroize] parseContent - 进入函数 
-INFO [taroize] parseNode - 入参 
-tagName: block 
-INFO [taroize] parseElement - 进入函数 
-INFO [taroize] parseAttribute - 入参 
-attr: {"key":"class","value":"scrollarea"} 
-INFO [taroize] parseContent - 进入函数 
-INFO [taroize] parseAttribute - 入参 
-attr: {"key":"scroll-y","value":null} 
-INFO [taroize] parseAttribute - 入参 
-attr: {"key":"type","value":"list"} 
-INFO [taroize] parseContent - 进入函数 
-INFO [taroize] parseNode - 入参 
-tagName: scroll-view 
-INFO [taroize] parseElement - 进入函数 
-INFO [taroize] parseAttribute - 入参 
-attr: {"key":"wx:for","value":"{{logs}}"} 
-INFO [taroize] parseContent - 进入函数 
-INFO [taroize] parseAttribute - 入参 
-attr: {"key":"wx:key","value":"timeStamp"} 
-INFO [taroize] parseContent - 进入函数 
-INFO [taroize] parseAttribute - 入参 
-attr: {"key":"wx:for-item","value":"log"} 
-INFO [taroize] parseContent - 进入函数 
-INFO [taroize] parseNode - 入参 
-tagName: block 
-INFO [taroize] parseElement - 进入函数 
-INFO [taroize] parseAttribute - 入参 
-attr: {"key":"class","value":"log-item"} 
-INFO [taroize] parseContent - 进入函数 
-INFO [taroize] parseNode - 入参 
-tagName: view 
-INFO [taroize] parseText - 进入函数 
-INFO [taroize] parseContent - 进入函数 
-INFO [taroize] createPreWxmlVistor - 入参 
-templates: [object Map] 
-INFO [taroize] templateBfs - 进入函数 
-INFO [taroize] createWxmlVistor - 入参 
-dirPath: /Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs 
-INFO [taroize] createWxmlVistor - 解析JSXElement 
-<Block><NavigationBar title="\u67E5\u770B\u542F\u52A8\u65E5\u5FD7" back={true} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><Block wx:for={logs} wx:key="timeStamp" wx:for-item="log"><View className="log-item">{index + 1 + ". " + log.date}</View></Block></ScrollView></Block> 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-NavigationBar 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-title="\u67E5\u770B\u542F\u52A8\u65E5\u5FD7" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-title 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-back={true} 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-back 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-color="black" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-color 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-background="#FFF" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-background 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-NavigationBar 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-ScrollView 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-className="scrollarea" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-className 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-scrollY 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-scrollY 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-type="list" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-type 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-wx:for={logs} 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-key={log.timeStamp} 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-key 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-key={log.timeStamp} 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-key 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-className="log-item" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-className 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-ScrollView 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXElement 
-<NavigationBar title="\u67E5\u770B\u542F\u52A8\u65E5\u5FD7" back={true} color="black" background="#FFF"></NavigationBar> 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-NavigationBar 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-title="\u67E5\u770B\u542F\u52A8\u65E5\u5FD7" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-title 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-back={true} 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-back 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-color="black" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-color 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-background="#FFF" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-background 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-NavigationBar 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-NavigationBar 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-title="\u67E5\u770B\u542F\u52A8\u65E5\u5FD7" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-title 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-back={true} 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-back 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-color="black" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-color 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-background="#FFF" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-background 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-NavigationBar 
-INFO [taroize] createWxmlVistor - 解析JSXElement 
-<ScrollView className="scrollarea" scrollY type="list"><Block>{logs.map((log, index) => {
-      return <Block key={log.timeStamp}><View className="log-item">{index + 1 + ". " + log.date}</View></Block>;
-    })}</Block></ScrollView> 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-ScrollView 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-className="scrollarea" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-className 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-scrollY 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-scrollY 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-type="list" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-type 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-key={log.timeStamp} 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-key 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-className="log-item" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-className 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-ScrollView 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-ScrollView 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-className="scrollarea" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-className 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-scrollY 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-scrollY 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-type="list" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-type 
-INFO [taroize] createWxmlVistor - 解析JSXElement 
-<Block>{logs.map((log, index) => {
-    return <Block key={log.timeStamp}><View className="log-item">{index + 1 + ". " + log.date}</View></Block>;
-  })}</Block> 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-key={log.timeStamp} 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-key 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-className="log-item" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-className 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-logs 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-map 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-log 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-index 
-INFO [taroize] createWxmlVistor - 解析JSXElement 
-<Block key={log.timeStamp}><View className="log-item">{index + 1 + ". " + log.date}</View></Block> 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-key={log.timeStamp} 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-key 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-className="log-item" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-className 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-key={log.timeStamp} 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-key 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-log 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-timeStamp 
-INFO [taroize] createWxmlVistor - 解析JSXElement 
-<View className="log-item">{index + 1 + ". " + log.date}</View> 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-className="log-item" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-className 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-className="log-item" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-className 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-index 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-log 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-date 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-logs 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-map 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-log 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-index 
-INFO [taroize] createWxmlVistor - 解析JSXElement 
-<Block key={log.timeStamp}><View className="log-item">{index + 1 + ". " + log.date}</View></Block> 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-key={log.timeStamp} 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-key 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-className="log-item" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-className 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-key={log.timeStamp} 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-key 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-log 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-timeStamp 
-INFO [taroize] createWxmlVistor - 解析JSXElement 
-<View className="log-item">{index + 1 + ". " + log.date}</View> 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-className="log-item" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-className 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-className="log-item" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-className 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-index 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-log 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-date 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-ScrollView 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] parseScript - 入参 
-scriptPath: /Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs/logs.js 
-INFO [taroize] parseCode - 入参
-scriptPath: /Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs/logs.js 
-INFO [taroize] parseScript - 解析Identifier 
-formatTime 
-INFO [taroize] parseScript - 解析Identifier 
-formatTime 
-INFO [taroize] parseScript - 解析CallExpression 
-Component({
-  data: {
-    logs: []
-  },
-  lifetimes: {
-    attached() {
-      this.setData({
-        logs: (wx.getStorageSync('logs') || []).map(log => {
-          return {
-            date: formatTime(new Date(log)),
-            timeStamp: log
-          };
-        })
-      });
-    }
-  }
-}) 
-INFO [taroize] parsePage - 入参 
-pagePath: Component({
-  data: {
-    logs: []
-  },
-  lifetimes: {
-    attached() {
-      this.setData({
-        logs: (wx.getStorageSync('logs') || []).map(log => {
-          return {
-            date: formatTime(new Date(log)),
-            timeStamp: log
-          };
-        })
-      });
-    }
-  }
-}) 
-INFO [taroize] parsePage - 解析CallExpression 
-this.setData({
-  logs: (wx.getStorageSync('logs') || []).map(log => {
-    return {
-      date: formatTime(new Date(log)),
-      timeStamp: log
-    };
-  })
-}) 
-INFO [taroize] parsePage - 解析CallExpression 
-(wx.getStorageSync('logs') || []).map(log => {
-  return {
-    date: formatTime(new Date(log)),
-    timeStamp: log
-  };
-}) 
-INFO [taroize] parsePage - 解析CallExpression 
-wx.getStorageSync('logs') 
-INFO [taroize] parsePage - 解析CallExpression 
-formatTime(new Date(log)) 
-INFO [taroize] parseScript - 解析Identifier 
-Component 
-INFO [taroize] parseScript - 解析Identifier 
-data 
-INFO [taroize] parseScript - 解析Identifier 
-logs 
-INFO [taroize] parseScript - 解析Identifier 
-lifetimes 
-INFO [taroize] parseScript - 解析Identifier 
-attached 
-INFO [taroize] parseScript - 解析BlockStatement 
-{
-  this.setData({
-    logs: (Taro.getStorageSync('logs') || []).map(log => {
-      return {
-        date: formatTime(new Date(log)),
-        timeStamp: log
-      };
-    })
-  });
-} 
-INFO [taroize] parseScript - 解析CallExpression 
-this.setData({
-  logs: (Taro.getStorageSync('logs') || []).map(log => {
-    return {
-      date: formatTime(new Date(log)),
-      timeStamp: log
-    };
-  })
-}) 
-INFO [taroize] parseScript - 解析Identifier 
-setData 
-INFO [taroize] parseScript - 解析Identifier 
-logs 
-INFO [taroize] parseScript - 解析CallExpression 
-(Taro.getStorageSync('logs') || []).map(log => {
-  return {
-    date: formatTime(new Date(log)),
-    timeStamp: log
-  };
-}) 
-INFO [taroize] parseScript - 解析CallExpression 
-Taro.getStorageSync('logs') 
-INFO [taroize] parseScript - 解析Identifier 
-Taro 
-INFO [taroize] parseScript - 解析Identifier 
-getStorageSync 
-INFO [taroize] parseScript - 解析Identifier 
-map 
-INFO [taroize] parseScript - 解析Identifier 
-log 
-INFO [taroize] parseScript - 解析BlockStatement 
-{
-  return {
-    date: formatTime(new Date(log)),
-    timeStamp: log
-  };
-} 
-INFO [taroize] parseScript - 解析Identifier 
-date 
-INFO [taroize] parseScript - 解析CallExpression 
-formatTime(new Date(log)) 
-INFO [taroize] parseScript - 解析Identifier 
-formatTime 
-INFO [taroize] parseScript - 解析Identifier 
-Date 
-INFO [taroize] parseScript - 解析Identifier 
-log 
-INFO [taroize] parseScript - 解析Identifier 
-timeStamp 
-INFO [taroize] parseScript - 解析Identifier 
-log 

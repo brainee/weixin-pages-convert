@@ -20,7 +20,7 @@ const defaultAvatarUrl =
   'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0'
 cacheOptions.setOptionsToCache({
   data: {
-    motto: 'Hello World2',
+    motto: 'Hello World1',
     userInfo: {
       avatarUrl: defaultAvatarUrl,
       nickName: '',
@@ -128,6 +128,28 @@ class _C extends React.Component {
                 </Block>
               )}
             </View>
+            {true && (
+              <View
+                style={{
+                  textAlign: 'center',
+                  color: '#b9b9b9',
+                }}
+              >
+                <Tloading
+                  theme="circular"
+                  size="1rem"
+                  text="加载中..."
+                  inheritColor
+                ></Tloading>
+                <Ticon
+                  slot="left-icon"
+                  prefix="wr"
+                  name="search"
+                  size="1rem"
+                  color="#bbb"
+                ></Ticon>
+              </View>
+            )}
             <View className="usermotto">
               <Text className="user-motto">{motto}</Text>
             </View>
