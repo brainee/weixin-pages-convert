@@ -3,3 +3,5 @@ https://github.com/NervJS/taro/blob/main/packages/taro-cli-convertor/src/index.t
 
 ### issue
 https://github.com/NervJS/taro/issues/15524
+
+![image](https://github.com/brainee/weixin-pages-convert/assets/5361813/d5951b40-349d-439d-b1ba-02111e7bf1e5)
