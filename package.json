@@ -8,7 +8,10 @@
   "license": "",
   "devDependencies": {
     "@tarojs/cli-convertor": "^3.6.26",
-    "miniprogram-api-typings": "^2.8.3-1",
+    "miniprogram-api-typings": "^3.12.2",
     "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "tdesign-miniprogram": "^1.2.9"
   }
 }

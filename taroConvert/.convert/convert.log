@@ -390,7 +390,7 @@ Taro.getApp
 INFO [taro-cli-convertor] parseAst - 解析CallExpression 
 Component({
   data: {
-    motto: 'Hello World',
+    motto: 'Hello World2',
     userInfo: {
       avatarUrl: defaultAvatarUrl,
       nickName: ''
@@ -447,7 +447,7 @@ Component({
 INFO [taro-cli-convertor] parseAst - 解析CallExpression 
 cacheOptions.setOptionsToCache({
   data: {
-    motto: 'Hello World',
+    motto: 'Hello World2',
     userInfo: {
       avatarUrl: defaultAvatarUrl,
       nickName: ''
@@ -663,7 +663,7 @@ INFO [taro-cli-convertor] parseAst - 解析StringLiteral
 INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0' 
 INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
-'Hello World' 
+'Hello World2' 
 INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
 '' 
 INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
@@ -731,7 +731,7 @@ Taro.getApp()
 INFO [taro-cli-convertor] convertToOptional - 解析CallExpression 
 cacheOptions.setOptionsToCache({
   data: {
-    motto: 'Hello World',
+    motto: 'Hello World2',
     userInfo: {
       avatarUrl: defaultAvatarUrl,
       nickName: ''
@@ -787,7 +787,7 @@ cacheOptions.setOptionsToCache({
 }) 
 INFO [taro-cli-convertor] convertToOptional - 解析ObjectProperty 
 data: {
-  motto: 'Hello World',
+  motto: 'Hello World2',
   userInfo: {
     avatarUrl: defaultAvatarUrl,
     nickName: ''
@@ -797,7 +797,7 @@ data: {
   canIUseNicknameComp: Taro.canIUse('input.type.nickname')
 } 
 INFO [taro-cli-convertor] convertToOptional - 解析ObjectProperty 
-motto: 'Hello World' 
+motto: 'Hello World2' 
 INFO [taro-cli-convertor] convertToOptional - 解析ObjectProperty 
 userInfo: {
   avatarUrl: defaultAvatarUrl,
@@ -2794,530 +2794,7 @@ const s = n.toString();
 INFO [taro-cli-convertor] traverseComponents - 开始转换组件 
 /Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/components/navigation-bar/navigation-bar 
 INFO [taroize] parse - 入参 
-option: {"json":"{}","script":"// logs.ts\n// const util = require('../../utils/util.js')\nimport { formatTime } from '../../utils/util';\nComponent({\n    data: {\n        logs: [],\n    },\n    lifetimes: {\n        attached() {\n            this.setData({\n                logs: (wx.getStorageSync('logs') || []).map((log) => {\n                    return {\n                        date: formatTime(new Date(log)),\n                        timeStamp: log\n                    };\n                }),\n            });\n        }\n    },\n});\n","scriptPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs/logs.js","wxml":"<!--logs.wxml-->\n<navigation-bar title=\"查看启动日志\" back=\"{{true}}\" color=\"black\" background=\"#FFF\"></navigation-bar>\n<scroll-view class=\"scrollarea\" scroll-y type=\"list\">\n  <block wx:for=\"{{logs}}\" wx:key=\"timeStamp\" wx:for-item=\"log\">\n    <view class=\"log-item\">{{index + 1}}. {{log.date}}</view>\n  </block>\n</scroll-view>\n","path":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs","rootPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram","pluginInfo":{"pluginRoot":"","pluginName":"","pages":{},"pagesMap":{},"publicComponents":{},"entryFilePath":""},"logFilePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/taroConvert/.convert/convert.log","templatePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs/logs.wxml","framework":"React"} 
-INFO [taroize] parseWXML - 入参 
-dirPath: /Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs 
-parseImport: undefined 
-INFO [taroize] parseNode - 入参 
-tagName: undefined 
-INFO [taroize] parseElement - 进入函数 
-INFO [taroize] parseNode - 入参 
-tagName: block 
-INFO [taroize] parseElement - 进入函数 
-INFO [taroize] parseAttribute - 入参 
-attr: {"key":"title","value":"查看启动日志"} 
-INFO [taroize] parseContent - 进入函数 
-INFO [taroize] parseAttribute - 入参 
-attr: {"key":"back","value":"{{true}}"} 
-INFO [taroize] parseContent - 进入函数 
-INFO [taroize] parseAttribute - 入参 
-attr: {"key":"color","value":"black"} 
-INFO [taroize] parseContent - 进入函数 
-INFO [taroize] parseAttribute - 入参 
-attr: {"key":"background","value":"#FFF"} 
-INFO [taroize] parseContent - 进入函数 
-INFO [taroize] parseNode - 入参 
-tagName: block 
-INFO [taroize] parseElement - 进入函数 
-INFO [taroize] parseAttribute - 入参 
-attr: {"key":"class","value":"scrollarea"} 
-INFO [taroize] parseContent - 进入函数 
-INFO [taroize] parseAttribute - 入参 
-attr: {"key":"scroll-y","value":null} 
-INFO [taroize] parseAttribute - 入参 
-attr: {"key":"type","value":"list"} 
-INFO [taroize] parseContent - 进入函数 
-INFO [taroize] parseNode - 入参 
-tagName: scroll-view 
-INFO [taroize] parseElement - 进入函数 
-INFO [taroize] parseAttribute - 入参 
-attr: {"key":"wx:for","value":"{{logs}}"} 
-INFO [taroize] parseContent - 进入函数 
-INFO [taroize] parseAttribute - 入参 
-attr: {"key":"wx:key","value":"timeStamp"} 
-INFO [taroize] parseContent - 进入函数 
-INFO [taroize] parseAttribute - 入参 
-attr: {"key":"wx:for-item","value":"log"} 
-INFO [taroize] parseContent - 进入函数 
-INFO [taroize] parseNode - 入参 
-tagName: block 
-INFO [taroize] parseElement - 进入函数 
-INFO [taroize] parseAttribute - 入参 
-attr: {"key":"class","value":"log-item"} 
-INFO [taroize] parseContent - 进入函数 
-INFO [taroize] parseNode - 入参 
-tagName: view 
-INFO [taroize] parseText - 进入函数 
-INFO [taroize] parseContent - 进入函数 
-INFO [taroize] createPreWxmlVistor - 入参 
-templates: [object Map] 
-INFO [taroize] templateBfs - 进入函数 
-INFO [taroize] createWxmlVistor - 入参 
-dirPath: /Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs 
-INFO [taroize] createWxmlVistor - 解析JSXElement 
-<Block><NavigationBar title="\u67E5\u770B\u542F\u52A8\u65E5\u5FD7" back={true} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><Block wx:for={logs} wx:key="timeStamp" wx:for-item="log"><View className="log-item">{index + 1 + ". " + log.date}</View></Block></ScrollView></Block> 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-NavigationBar 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-title="\u67E5\u770B\u542F\u52A8\u65E5\u5FD7" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-title 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-back={true} 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-back 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-color="black" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-color 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-background="#FFF" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-background 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-NavigationBar 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-ScrollView 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-className="scrollarea" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-className 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-scrollY 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-scrollY 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-type="list" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-type 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-wx:for={logs} 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-key={log.timeStamp} 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-key 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-key={log.timeStamp} 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-key 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-className="log-item" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-className 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-ScrollView 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXElement 
-<NavigationBar title="\u67E5\u770B\u542F\u52A8\u65E5\u5FD7" back={true} color="black" background="#FFF"></NavigationBar> 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-NavigationBar 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-title="\u67E5\u770B\u542F\u52A8\u65E5\u5FD7" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-title 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-back={true} 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-back 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-color="black" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-color 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-background="#FFF" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-background 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-NavigationBar 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-NavigationBar 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-title="\u67E5\u770B\u542F\u52A8\u65E5\u5FD7" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-title 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-back={true} 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-back 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-color="black" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-color 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-background="#FFF" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-background 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-NavigationBar 
-INFO [taroize] createWxmlVistor - 解析JSXElement 
-<ScrollView className="scrollarea" scrollY type="list"><Block>{logs.map((log, index) => {
-      return <Block key={log.timeStamp}><View className="log-item">{index + 1 + ". " + log.date}</View></Block>;
-    })}</Block></ScrollView> 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-ScrollView 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-className="scrollarea" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-className 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-scrollY 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-scrollY 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-type="list" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-type 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-key={log.timeStamp} 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-key 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-className="log-item" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-className 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-ScrollView 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-ScrollView 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-className="scrollarea" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-className 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-scrollY 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-scrollY 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-type="list" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-type 
-INFO [taroize] createWxmlVistor - 解析JSXElement 
-<Block>{logs.map((log, index) => {
-    return <Block key={log.timeStamp}><View className="log-item">{index + 1 + ". " + log.date}</View></Block>;
-  })}</Block> 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-key={log.timeStamp} 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-key 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-className="log-item" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-className 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-logs 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-map 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-log 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-index 
-INFO [taroize] createWxmlVistor - 解析JSXElement 
-<Block key={log.timeStamp}><View className="log-item">{index + 1 + ". " + log.date}</View></Block> 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-key={log.timeStamp} 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-key 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-className="log-item" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-className 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-key={log.timeStamp} 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-key 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-log 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-timeStamp 
-INFO [taroize] createWxmlVistor - 解析JSXElement 
-<View className="log-item">{index + 1 + ". " + log.date}</View> 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-className="log-item" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-className 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-className="log-item" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-className 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-index 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-log 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-date 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-logs 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-map 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-log 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-index 
-INFO [taroize] createWxmlVistor - 解析JSXElement 
-<Block key={log.timeStamp}><View className="log-item">{index + 1 + ". " + log.date}</View></Block> 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-key={log.timeStamp} 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-key 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-className="log-item" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-className 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-key={log.timeStamp} 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-key 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-log 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-timeStamp 
-INFO [taroize] createWxmlVistor - 解析JSXElement 
-<View className="log-item">{index + 1 + ". " + log.date}</View> 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-className="log-item" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-className 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-className="log-item" 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-className 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-index 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-log 
-INFO [taroize] createWxmlVistor - 解析Identifier 
-date 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-View 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-ScrollView 
-INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
-Block 
-INFO [taroize] parseScript - 入参 
-scriptPath: /Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs/logs.js 
-INFO [taroize] parseCode - 入参
-scriptPath: /Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs/logs.js 
-INFO [taroize] parseScript - 解析Identifier 
-formatTime 
-INFO [taroize] parseScript - 解析Identifier 
-formatTime 
-INFO [taroize] parseScript - 解析CallExpression 
-Component({
-  data: {
-    logs: []
-  },
-  lifetimes: {
-    attached() {
-      this.setData({
-        logs: (wx.getStorageSync('logs') || []).map(log => {
-          return {
-            date: formatTime(new Date(log)),
-            timeStamp: log
-          };
-        })
-      });
-    }
-  }
-}) 
-INFO [taroize] parsePage - 入参 
-pagePath: Component({
-  data: {
-    logs: []
-  },
-  lifetimes: {
-    attached() {
-      this.setData({
-        logs: (wx.getStorageSync('logs') || []).map(log => {
-          return {
-            date: formatTime(new Date(log)),
-            timeStamp: log
-          };
-        })
-      });
-    }
-  }
-}) 
-INFO [taroize] parsePage - 解析CallExpression 
-this.setData({
-  logs: (wx.getStorageSync('logs') || []).map(log => {
-    return {
-      date: formatTime(new Date(log)),
-      timeStamp: log
-    };
-  })
-}) 
-INFO [taroize] parsePage - 解析CallExpression 
-(wx.getStorageSync('logs') || []).map(log => {
-  return {
-    date: formatTime(new Date(log)),
-    timeStamp: log
-  };
-}) 
-INFO [taroize] parsePage - 解析CallExpression 
-wx.getStorageSync('logs') 
-INFO [taroize] parsePage - 解析CallExpression 
-formatTime(new Date(log)) 
-INFO [taroize] parseScript - 解析Identifier 
-Component 
-INFO [taroize] parseScript - 解析Identifier 
-data 
-INFO [taroize] parseScript - 解析Identifier 
-logs 
-INFO [taroize] parseScript - 解析Identifier 
-lifetimes 
-INFO [taroize] parseScript - 解析Identifier 
-attached 
-INFO [taroize] parseScript - 解析BlockStatement 
-{
-  this.setData({
-    logs: (Taro.getStorageSync('logs') || []).map(log => {
-      return {
-        date: formatTime(new Date(log)),
-        timeStamp: log
-      };
-    })
-  });
-} 
-INFO [taroize] parseScript - 解析CallExpression 
-this.setData({
-  logs: (Taro.getStorageSync('logs') || []).map(log => {
-    return {
-      date: formatTime(new Date(log)),
-      timeStamp: log
-    };
-  })
-}) 
-INFO [taroize] parseScript - 解析Identifier 
-setData 
-INFO [taroize] parseScript - 解析Identifier 
-logs 
-INFO [taroize] parseScript - 解析CallExpression 
-(Taro.getStorageSync('logs') || []).map(log => {
-  return {
-    date: formatTime(new Date(log)),
-    timeStamp: log
-  };
-}) 
-INFO [taroize] parseScript - 解析CallExpression 
-Taro.getStorageSync('logs') 
-INFO [taroize] parseScript - 解析Identifier 
-Taro 
-INFO [taroize] parseScript - 解析Identifier 
-getStorageSync 
-INFO [taroize] parseScript - 解析Identifier 
-map 
-INFO [taroize] parseScript - 解析Identifier 
-log 
-INFO [taroize] parseScript - 解析BlockStatement 
-{
-  return {
-    date: formatTime(new Date(log)),
-    timeStamp: log
-  };
-} 
-INFO [taroize] parseScript - 解析Identifier 
-date 
-INFO [taroize] parseScript - 解析CallExpression 
-formatTime(new Date(log)) 
-INFO [taroize] parseScript - 解析Identifier 
-formatTime 
-INFO [taroize] parseScript - 解析Identifier 
-Date 
-INFO [taroize] parseScript - 解析Identifier 
-log 
-INFO [taroize] parseScript - 解析Identifier 
-timeStamp 
-INFO [taroize] parseScript - 解析Identifier 
-log 
-INFO [taroize] parse - 入参 
-option: {"json":"{}","script":"\"use strict\";\n// index.ts\n// 获取应用实例\nconst app = getApp();\nconst defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0';\nComponent({\n    data: {\n        motto: 'Hello World',\n        userInfo: {\n            avatarUrl: defaultAvatarUrl,\n            nickName: '',\n        },\n        hasUserInfo: false,\n        canIUseGetUserProfile: wx.canIUse('getUserProfile'),\n        canIUseNicknameComp: wx.canIUse('input.type.nickname'),\n    },\n    methods: {\n        // 事件处理函数\n        bindViewTap() {\n            wx.navigateTo({\n                url: '../logs/logs',\n            });\n        },\n        onChooseAvatar(e) {\n            const { avatarUrl } = e.detail;\n            const { nickName } = this.data.userInfo;\n            this.setData({\n                \"userInfo.avatarUrl\": avatarUrl,\n                hasUserInfo: nickName && avatarUrl && avatarUrl !== defaultAvatarUrl,\n            });\n        },\n        onInputChange(e) {\n            const nickName = e.detail.value;\n            const { avatarUrl } = this.data.userInfo;\n            this.setData({\n                \"userInfo.nickName\": nickName,\n                hasUserInfo: nickName && avatarUrl && avatarUrl !== defaultAvatarUrl,\n            });\n        },\n        getUserProfile() {\n            // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗\n            wx.getUserProfile({\n                desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写\n                success: (res) => {\n                    console.log(res);\n                    this.setData({\n                        userInfo: res.userInfo,\n                        hasUserInfo: true\n                    });\n                }\n            });\n        },\n    },\n});\n","scriptPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/index/index.js","wxml":"<!--index.wxml-->\n<navigation-bar title=\"Weixin\" back=\"{{false}}\" color=\"black\" background=\"#FFF\"></navigation-bar>\n<scroll-view class=\"scrollarea\" scroll-y type=\"list\">\n  <view class=\"container\">\n    <view class=\"userinfo\">\n      <block wx:if=\"{{canIUseNicknameComp && !hasUserInfo}}\">\n        <button class=\"avatar-wrapper\" open-type=\"chooseAvatar\" bind:chooseavatar=\"onChooseAvatar\">\n          <image class=\"avatar\" src=\"{{userInfo.avatarUrl}}\"></image>\n        </button>\n        <view class=\"nickname-wrapper\">\n          <text class=\"nickname-label\">昵称</text>\n          <input type=\"nickname\" class=\"nickname-input\" placeholder=\"请输入昵称\" bind:change=\"onInputChange\" />\n        </view>\n      </block>\n      <block wx:elif=\"{{!hasUserInfo}}\">\n        <button wx:if=\"{{canIUseGetUserProfile}}\" bindtap=\"getUserProfile\"> 获取头像昵称 </button>\n        <view wx:else> 请使用2.10.4及以上版本基础库 </view>\n      </block>\n      <block wx:else>\n        <image bindtap=\"bindViewTap\" class=\"userinfo-avatar\" src=\"{{userInfo.avatarUrl}}\" mode=\"cover\"></image>\n        <text class=\"userinfo-nickname\">{{userInfo.nickName}}</text>\n      </block>\n    </view>\n    <view class=\"usermotto\">\n      <text class=\"user-motto\">{{motto}}</text>\n    </view>\n  </view>\n</scroll-view>\n","path":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/index","rootPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram","pluginInfo":{"pluginRoot":"","pluginName":"","pages":{},"pagesMap":{},"publicComponents":{},"entryFilePath":""},"logFilePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/taroConvert/.convert/convert.log","templatePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/index/index.wxml","framework":"React"} 
+option: {"json":"{}","script":"\"use strict\";\n// index.ts\n// 获取应用实例\nconst app = getApp();\nconst defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0';\nComponent({\n    data: {\n        motto: 'Hello World2',\n        userInfo: {\n            avatarUrl: defaultAvatarUrl,\n            nickName: '',\n        },\n        hasUserInfo: false,\n        canIUseGetUserProfile: wx.canIUse('getUserProfile'),\n        canIUseNicknameComp: wx.canIUse('input.type.nickname'),\n    },\n    methods: {\n        // 事件处理函数\n        bindViewTap() {\n            wx.navigateTo({\n                url: '../logs/logs',\n            });\n        },\n        onChooseAvatar(e) {\n            const { avatarUrl } = e.detail;\n            const { nickName } = this.data.userInfo;\n            this.setData({\n                \"userInfo.avatarUrl\": avatarUrl,\n                hasUserInfo: nickName && avatarUrl && avatarUrl !== defaultAvatarUrl,\n            });\n        },\n        onInputChange(e) {\n            const nickName = e.detail.value;\n            const { avatarUrl } = this.data.userInfo;\n            this.setData({\n                \"userInfo.nickName\": nickName,\n                hasUserInfo: nickName && avatarUrl && avatarUrl !== defaultAvatarUrl,\n            });\n        },\n        getUserProfile() {\n            // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗\n            wx.getUserProfile({\n                desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写\n                success: (res) => {\n                    console.log(res);\n                    this.setData({\n                        userInfo: res.userInfo,\n                        hasUserInfo: true\n                    });\n                }\n            });\n        },\n    },\n});\n","scriptPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/index/index.js","wxml":"<!--index.wxml-->\n<navigation-bar title=\"Weixin\" back=\"{{false}}\" color=\"black\" background=\"#FFF\"></navigation-bar>\n<scroll-view class=\"scrollarea\" scroll-y type=\"list\">\n  <view class=\"container\">\n    <view class=\"userinfo\">\n      <block wx:if=\"{{canIUseNicknameComp && !hasUserInfo}}\">\n        <button class=\"avatar-wrapper\" open-type=\"chooseAvatar\" bind:chooseavatar=\"onChooseAvatar\">\n          <image class=\"avatar\" src=\"{{userInfo.avatarUrl}}\"></image>\n        </button>\n        <view class=\"nickname-wrapper\">\n          <text class=\"nickname-label\">昵称</text>\n          <input type=\"nickname\" class=\"nickname-input\" placeholder=\"请输入昵称\" bind:change=\"onInputChange\" />\n        </view>\n      </block>\n      <block wx:elif=\"{{!hasUserInfo}}\">\n        <button wx:if=\"{{canIUseGetUserProfile}}\" bindtap=\"getUserProfile\"> 获取头像昵称 </button>\n        <view wx:else> 请使用2.10.4及以上版本基础库 </view>\n      </block>\n      <block wx:else>\n        <image bindtap=\"bindViewTap\" class=\"userinfo-avatar\" src=\"{{userInfo.avatarUrl}}\" mode=\"cover\"></image>\n        <text class=\"userinfo-nickname\">{{userInfo.nickName}}</text>\n      </block>\n    </view>\n    <view class=\"usermotto\">\n      <text class=\"user-motto\">{{motto}}</text>\n    </view>\n  </view>\n</scroll-view>\n","path":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/index","rootPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram","pluginInfo":{"pluginRoot":"","pluginName":"","pages":{},"pagesMap":{},"publicComponents":{},"entryFilePath":""},"logFilePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/taroConvert/.convert/convert.log","templatePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/index/index.wxml","framework":"React"} 
 INFO [taroize] parseWXML - 入参 
 dirPath: /Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/index 
 parseImport: undefined 
@@ -4780,7 +4257,7 @@ defaultAvatarUrl
 INFO [taroize] parseScript - 解析CallExpression 
 Component({
   data: {
-    motto: 'Hello World',
+    motto: 'Hello World2',
     userInfo: {
       avatarUrl: defaultAvatarUrl,
       nickName: ''
@@ -4837,7 +4314,7 @@ Component({
 INFO [taroize] parsePage - 入参 
 pagePath: Component({
   data: {
-    motto: 'Hello World',
+    motto: 'Hello World2',
     userInfo: {
       avatarUrl: defaultAvatarUrl,
       nickName: ''
@@ -7777,3 +7254,526 @@ INFO [taroize] parseScript - 解析Identifier
 data 
 INFO [taroize] parseScript - 解析Identifier 
 delta 
+INFO [taroize] parse - 入参 
+option: {"json":"{}","script":"// logs.ts\n// const util = require('../../utils/util.js')\nimport { formatTime } from '../../utils/util';\nComponent({\n    data: {\n        logs: [],\n    },\n    lifetimes: {\n        attached() {\n            this.setData({\n                logs: (wx.getStorageSync('logs') || []).map((log) => {\n                    return {\n                        date: formatTime(new Date(log)),\n                        timeStamp: log\n                    };\n                }),\n            });\n        }\n    },\n});\n","scriptPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs/logs.js","wxml":"<!--logs.wxml-->\n<navigation-bar title=\"查看启动日志\" back=\"{{true}}\" color=\"black\" background=\"#FFF\"></navigation-bar>\n<scroll-view class=\"scrollarea\" scroll-y type=\"list\">\n  <block wx:for=\"{{logs}}\" wx:key=\"timeStamp\" wx:for-item=\"log\">\n    <view class=\"log-item\">{{index + 1}}. {{log.date}}</view>\n  </block>\n</scroll-view>\n","path":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs","rootPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram","pluginInfo":{"pluginRoot":"","pluginName":"","pages":{},"pagesMap":{},"publicComponents":{},"entryFilePath":""},"logFilePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/taroConvert/.convert/convert.log","templatePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs/logs.wxml","framework":"React"} 
+INFO [taroize] parseWXML - 入参 
+dirPath: /Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs 
+parseImport: undefined 
+INFO [taroize] parseNode - 入参 
+tagName: undefined 
+INFO [taroize] parseElement - 进入函数 
+INFO [taroize] parseNode - 入参 
+tagName: block 
+INFO [taroize] parseElement - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"title","value":"查看启动日志"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"back","value":"{{true}}"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"color","value":"black"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"background","value":"#FFF"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseNode - 入参 
+tagName: block 
+INFO [taroize] parseElement - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"class","value":"scrollarea"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"scroll-y","value":null} 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"type","value":"list"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseNode - 入参 
+tagName: scroll-view 
+INFO [taroize] parseElement - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"wx:for","value":"{{logs}}"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"wx:key","value":"timeStamp"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"wx:for-item","value":"log"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseNode - 入参 
+tagName: block 
+INFO [taroize] parseElement - 进入函数 
+INFO [taroize] parseAttribute - 入参 
+attr: {"key":"class","value":"log-item"} 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] parseNode - 入参 
+tagName: view 
+INFO [taroize] parseText - 进入函数 
+INFO [taroize] parseContent - 进入函数 
+INFO [taroize] createPreWxmlVistor - 入参 
+templates: [object Map] 
+INFO [taroize] templateBfs - 进入函数 
+INFO [taroize] createWxmlVistor - 入参 
+dirPath: /Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs 
+INFO [taroize] createWxmlVistor - 解析JSXElement 
+<Block><NavigationBar title="\u67E5\u770B\u542F\u52A8\u65E5\u5FD7" back={true} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><Block wx:for={logs} wx:key="timeStamp" wx:for-item="log"><View className="log-item">{index + 1 + ". " + log.date}</View></Block></ScrollView></Block> 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+NavigationBar 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+title="\u67E5\u770B\u542F\u52A8\u65E5\u5FD7" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+title 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+back={true} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+back 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+color="black" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+color 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+background="#FFF" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+background 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+NavigationBar 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+ScrollView 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+className="scrollarea" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+className 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+scrollY 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+scrollY 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+type="list" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+type 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+wx:for={logs} 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+key={log.timeStamp} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+key 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+key={log.timeStamp} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+key 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+className="log-item" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+className 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+ScrollView 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXElement 
+<NavigationBar title="\u67E5\u770B\u542F\u52A8\u65E5\u5FD7" back={true} color="black" background="#FFF"></NavigationBar> 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+NavigationBar 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+title="\u67E5\u770B\u542F\u52A8\u65E5\u5FD7" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+title 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+back={true} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+back 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+color="black" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+color 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+background="#FFF" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+background 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+NavigationBar 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+NavigationBar 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+title="\u67E5\u770B\u542F\u52A8\u65E5\u5FD7" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+title 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+back={true} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+back 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+color="black" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+color 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+background="#FFF" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+background 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+NavigationBar 
+INFO [taroize] createWxmlVistor - 解析JSXElement 
+<ScrollView className="scrollarea" scrollY type="list"><Block>{logs.map((log, index) => {
+      return <Block key={log.timeStamp}><View className="log-item">{index + 1 + ". " + log.date}</View></Block>;
+    })}</Block></ScrollView> 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+ScrollView 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+className="scrollarea" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+className 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+scrollY 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+scrollY 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+type="list" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+type 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+key={log.timeStamp} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+key 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+className="log-item" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+className 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+ScrollView 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+ScrollView 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+className="scrollarea" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+className 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+scrollY 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+scrollY 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+type="list" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+type 
+INFO [taroize] createWxmlVistor - 解析JSXElement 
+<Block>{logs.map((log, index) => {
+    return <Block key={log.timeStamp}><View className="log-item">{index + 1 + ". " + log.date}</View></Block>;
+  })}</Block> 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+key={log.timeStamp} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+key 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+className="log-item" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+className 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+logs 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+map 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+log 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+index 
+INFO [taroize] createWxmlVistor - 解析JSXElement 
+<Block key={log.timeStamp}><View className="log-item">{index + 1 + ". " + log.date}</View></Block> 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+key={log.timeStamp} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+key 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+className="log-item" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+className 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+key={log.timeStamp} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+key 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+log 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+timeStamp 
+INFO [taroize] createWxmlVistor - 解析JSXElement 
+<View className="log-item">{index + 1 + ". " + log.date}</View> 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+className="log-item" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+className 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+className="log-item" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+className 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+index 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+log 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+date 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+logs 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+map 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+log 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+index 
+INFO [taroize] createWxmlVistor - 解析JSXElement 
+<Block key={log.timeStamp}><View className="log-item">{index + 1 + ". " + log.date}</View></Block> 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+key={log.timeStamp} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+key 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+className="log-item" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+className 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+key={log.timeStamp} 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+key 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+log 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+timeStamp 
+INFO [taroize] createWxmlVistor - 解析JSXElement 
+<View className="log-item">{index + 1 + ". " + log.date}</View> 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+className="log-item" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+className 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXAttribute 
+className="log-item" 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+className 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+index 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+log 
+INFO [taroize] createWxmlVistor - 解析Identifier 
+date 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+View 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+ScrollView 
+INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
+Block 
+INFO [taroize] parseScript - 入参 
+scriptPath: /Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs/logs.js 
+INFO [taroize] parseCode - 入参
+scriptPath: /Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/logs/logs.js 
+INFO [taroize] parseScript - 解析Identifier 
+formatTime 
+INFO [taroize] parseScript - 解析Identifier 
+formatTime 
+INFO [taroize] parseScript - 解析CallExpression 
+Component({
+  data: {
+    logs: []
+  },
+  lifetimes: {
+    attached() {
+      this.setData({
+        logs: (wx.getStorageSync('logs') || []).map(log => {
+          return {
+            date: formatTime(new Date(log)),
+            timeStamp: log
+          };
+        })
+      });
+    }
+  }
+}) 
+INFO [taroize] parsePage - 入参 
+pagePath: Component({
+  data: {
+    logs: []
+  },
+  lifetimes: {
+    attached() {
+      this.setData({
+        logs: (wx.getStorageSync('logs') || []).map(log => {
+          return {
+            date: formatTime(new Date(log)),
+            timeStamp: log
+          };
+        })
+      });
+    }
+  }
+}) 
+INFO [taroize] parsePage - 解析CallExpression 
+this.setData({
+  logs: (wx.getStorageSync('logs') || []).map(log => {
+    return {
+      date: formatTime(new Date(log)),
+      timeStamp: log
+    };
+  })
+}) 
+INFO [taroize] parsePage - 解析CallExpression 
+(wx.getStorageSync('logs') || []).map(log => {
+  return {
+    date: formatTime(new Date(log)),
+    timeStamp: log
+  };
+}) 
+INFO [taroize] parsePage - 解析CallExpression 
+wx.getStorageSync('logs') 
+INFO [taroize] parsePage - 解析CallExpression 
+formatTime(new Date(log)) 
+INFO [taroize] parseScript - 解析Identifier 
+Component 
+INFO [taroize] parseScript - 解析Identifier 
+data 
+INFO [taroize] parseScript - 解析Identifier 
+logs 
+INFO [taroize] parseScript - 解析Identifier 
+lifetimes 
+INFO [taroize] parseScript - 解析Identifier 
+attached 
+INFO [taroize] parseScript - 解析BlockStatement 
+{
+  this.setData({
+    logs: (Taro.getStorageSync('logs') || []).map(log => {
+      return {
+        date: formatTime(new Date(log)),
+        timeStamp: log
+      };
+    })
+  });
+} 
+INFO [taroize] parseScript - 解析CallExpression 
+this.setData({
+  logs: (Taro.getStorageSync('logs') || []).map(log => {
+    return {
+      date: formatTime(new Date(log)),
+      timeStamp: log
+    };
+  })
+}) 
+INFO [taroize] parseScript - 解析Identifier 
+setData 
+INFO [taroize] parseScript - 解析Identifier 
+logs 
+INFO [taroize] parseScript - 解析CallExpression 
+(Taro.getStorageSync('logs') || []).map(log => {
+  return {
+    date: formatTime(new Date(log)),
+    timeStamp: log
+  };
+}) 
+INFO [taroize] parseScript - 解析CallExpression 
+Taro.getStorageSync('logs') 
+INFO [taroize] parseScript - 解析Identifier 
+Taro 
+INFO [taroize] parseScript - 解析Identifier 
+getStorageSync 
+INFO [taroize] parseScript - 解析Identifier 
+map 
+INFO [taroize] parseScript - 解析Identifier 
+log 
+INFO [taroize] parseScript - 解析BlockStatement 
+{
+  return {
+    date: formatTime(new Date(log)),
+    timeStamp: log
+  };
+} 
+INFO [taroize] parseScript - 解析Identifier 
+date 
+INFO [taroize] parseScript - 解析CallExpression 
+formatTime(new Date(log)) 
+INFO [taroize] parseScript - 解析Identifier 
+formatTime 
+INFO [taroize] parseScript - 解析Identifier 
+Date 
+INFO [taroize] parseScript - 解析Identifier 
+log 
+INFO [taroize] parseScript - 解析Identifier 
+timeStamp 
+INFO [taroize] parseScript - 解析Identifier 
+log 
