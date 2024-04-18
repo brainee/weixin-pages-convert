@@ -15,6 +15,8 @@ import {
 } from '@tarojs/components'
 import React from 'react'
 import Taro from '@tarojs/taro'
+import Tloading from 'tdesign-miniprogram/miniprogram_dist/loading/loading'
+import Ticon from 'tdesign-miniprogram/miniprogram_dist/icon/icon'
 const app = Taro.getApp()
 const defaultAvatarUrl =
   'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0'
@@ -81,7 +83,7 @@ class _C extends React.Component {
     return (
       <Block>
         <NavigationBar
-          title="Weixin"
+          title="Weixin1"
           back={false}
           color="black"
           background="#FFF"

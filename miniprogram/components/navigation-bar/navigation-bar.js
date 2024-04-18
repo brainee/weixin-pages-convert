@@ -80,6 +80,7 @@ Component({
      */
     methods: {
         _showChange(show) {
+          xxx
             const animated = this.data.animated;
             let displayStyle = '';
             if (animated) {

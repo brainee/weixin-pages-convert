@@ -583,7 +583,7 @@ class _C extends React.Component {
       canIUseGetUserProfile,
       motto
     } = this.data;
-    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+    return <Block><NavigationBar title="Weixin1" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
             textAlign: "center",
             color: "#b9b9b9"
           }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
@@ -592,12 +592,12 @@ class _C extends React.Component {
 INFO [taro-cli-convertor] parseAst - 解析MemberExpression 
 this.data 
 INFO [taro-cli-convertor] parseAst - 解析JSXElement 
-<Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+<Block><NavigationBar title="Weixin1" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
         textAlign: "center",
         color: "#b9b9b9"
       }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block> 
 INFO [taro-cli-convertor] parseAst - 解析JSXElement 
-<NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar> 
+<NavigationBar title="Weixin1" back={false} color="black" background="#FFF"></NavigationBar> 
 INFO [taro-cli-convertor] parseAst - 解析JSXElement 
 <ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
       textAlign: "center",
@@ -700,7 +700,7 @@ INFO [taro-cli-convertor] parseAst - 解析StringLiteral
 INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
 '展示用户信息' 
 INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
-"Weixin" 
+"Weixin1" 
 INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
 "black" 
 INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
@@ -977,7 +977,7 @@ INFO [taro-cli-convertor] convertToOptional - 解析ClassBody
       canIUseGetUserProfile,
       motto
     } = this.data;
-    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+    return <Block><NavigationBar title="Weixin1" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
             textAlign: "center",
             color: "#b9b9b9"
           }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
@@ -993,7 +993,7 @@ INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression
       canIUseGetUserProfile,
       motto
     } = this.data;
-    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+    return <Block><NavigationBar title="Weixin1" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
             textAlign: "center",
             color: "#b9b9b9"
           }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
@@ -1009,7 +1009,7 @@ INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression
       canIUseGetUserProfile,
       motto
     } = this.data;
-    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+    return <Block><NavigationBar title="Weixin1" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
             textAlign: "center",
             color: "#b9b9b9"
           }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
@@ -1025,7 +1025,7 @@ INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression
       canIUseGetUserProfile,
       motto
     } = this.data;
-    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+    return <Block><NavigationBar title="Weixin1" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
             textAlign: "center",
             color: "#b9b9b9"
           }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
@@ -1041,7 +1041,7 @@ INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression
       canIUseGetUserProfile,
       motto
     } = this.data;
-    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+    return <Block><NavigationBar title="Weixin1" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
             textAlign: "center",
             color: "#b9b9b9"
           }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
@@ -1057,7 +1057,7 @@ INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression
       canIUseGetUserProfile,
       motto
     } = this.data;
-    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+    return <Block><NavigationBar title="Weixin1" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
             textAlign: "center",
             color: "#b9b9b9"
           }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
@@ -1073,7 +1073,7 @@ INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression
       canIUseGetUserProfile,
       motto
     } = this.data;
-    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+    return <Block><NavigationBar title="Weixin1" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
             textAlign: "center",
             color: "#b9b9b9"
           }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
@@ -1089,7 +1089,7 @@ INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression
       canIUseGetUserProfile,
       motto
     } = this.data;
-    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+    return <Block><NavigationBar title="Weixin1" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
             textAlign: "center",
             color: "#b9b9b9"
           }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
@@ -1105,7 +1105,7 @@ INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression
       canIUseGetUserProfile,
       motto
     } = this.data;
-    return <Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
+    return <Block><NavigationBar title="Weixin1" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo">{canIUseNicknameComp && !hasUserInfo ? <Block><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block> : !hasUserInfo ? <Block>{canIUseGetUserProfile ? <Button onClick={this.getUserProfile}>获取头像昵称</Button> : <View>请使用2.10.4及以上版本基础库</View>}</Block> : <Block><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block>}</View>{true && <View style={{
             textAlign: "center",
             color: "#b9b9b9"
           }}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View>}<View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block>;
@@ -1271,6 +1271,7 @@ Component({
    */
   methods: {
     _showChange(show) {
+      xxx;
       const animated = this.data.animated;
       let displayStyle = '';
       if (animated) {
@@ -1377,6 +1378,7 @@ cacheOptions.setOptionsToCache({
    */
   methods: {
     _showChange(show) {
+      xxx;
       const animated = this.data.animated;
       let displayStyle = '';
       if (animated) {
@@ -1507,7 +1509,7 @@ class _C extends React.Component {
               /*  返回首页  */
             }{homeButton && <Block><View className="weui-navigation-bar__buttons weui-navigation-bar__buttons_home"><View onClick={this.home} className="weui-navigation-bar__btn_home_wrapper" hoverClass="weui-active" ariaRole="button" ariaLabel="\u9996\u9875"><View className="weui-navigation-bar__button weui-navigation-bar__btn_home"></View></View></View></Block>}</Block> : <Block>{this.props.renderLeft}</Block>}</View>{
           /*  标题  */
-        }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
+        }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title + "2"}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
           /*  右侧留空  */
         }<View className="weui-navigation-bar__right">{this.props.renderRight}</View></View></View>;
   }
@@ -1519,7 +1521,7 @@ INFO [taro-cli-convertor] parseAst - 解析JSXElement
           /*  返回首页  */
         }{homeButton && <Block><View className="weui-navigation-bar__buttons weui-navigation-bar__buttons_home"><View onClick={this.home} className="weui-navigation-bar__btn_home_wrapper" hoverClass="weui-active" ariaRole="button" ariaLabel="\u9996\u9875"><View className="weui-navigation-bar__button weui-navigation-bar__btn_home"></View></View></View></Block>}</Block> : <Block>{this.props.renderLeft}</Block>}</View>{
       /*  标题  */
-    }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
+    }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title + "2"}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
       /*  右侧留空  */
     }<View className="weui-navigation-bar__right">{this.props.renderRight}</View></View></View> 
 INFO [taro-cli-convertor] parseAst - 解析JSXElement 
@@ -1527,7 +1529,7 @@ INFO [taro-cli-convertor] parseAst - 解析JSXElement
         /*  返回首页  */
       }{homeButton && <Block><View className="weui-navigation-bar__buttons weui-navigation-bar__buttons_home"><View onClick={this.home} className="weui-navigation-bar__btn_home_wrapper" hoverClass="weui-active" ariaRole="button" ariaLabel="\u9996\u9875"><View className="weui-navigation-bar__button weui-navigation-bar__btn_home"></View></View></View></Block>}</Block> : <Block>{this.props.renderLeft}</Block>}</View>{
     /*  标题  */
-  }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
+  }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title + "2"}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
     /*  右侧留空  */
   }<View className="weui-navigation-bar__right">{this.props.renderRight}</View></View> 
 INFO [taro-cli-convertor] parseAst - 解析JSXElement 
@@ -1565,15 +1567,15 @@ this.props.renderLeft
 INFO [taro-cli-convertor] parseAst - 解析MemberExpression 
 this.props 
 INFO [taro-cli-convertor] parseAst - 解析JSXElement 
-<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View> 
+<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title + "2"}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View> 
 INFO [taro-cli-convertor] parseAst - 解析JSXElement 
 <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View> 
 INFO [taro-cli-convertor] parseAst - 解析JSXElement 
 <View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View> 
 INFO [taro-cli-convertor] parseAst - 解析JSXElement 
-<Block><Text>{title}</Text></Block> 
+<Block><Text>{title + "2"}</Text></Block> 
 INFO [taro-cli-convertor] parseAst - 解析JSXElement 
-<Text>{title}</Text> 
+<Text>{title + "2"}</Text> 
 INFO [taro-cli-convertor] parseAst - 解析JSXElement 
 <Block>{this.props.renderCenter}</Block> 
 INFO [taro-cli-convertor] parseAst - 解析MemberExpression 
@@ -1697,6 +1699,8 @@ INFO [taro-cli-convertor] parseAst - 解析StringLiteral
 INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
 "\u52A0\u8F7D\u4E2D" 
 INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
+"2" 
+INFO [taro-cli-convertor] parseAst - 解析StringLiteral 
 "weui-navigation-bar__right" 
 INFO [taro-cli-convertor] convertToOptional - 解析ObjectProperty 
 cacheOptions 
@@ -1788,6 +1792,7 @@ cacheOptions.setOptionsToCache({
    */
   methods: {
     _showChange(show) {
+      xxx;
       const animated = this.data.animated;
       let displayStyle = '';
       if (animated) {
@@ -2040,6 +2045,7 @@ INFO [taro-cli-convertor] convertToOptional - 解析ObjectProperty
  */
 methods: {
   _showChange(show) {
+    xxx;
     const animated = this.data.animated;
     let displayStyle = '';
     if (animated) {
@@ -2102,7 +2108,7 @@ INFO [taro-cli-convertor] convertToOptional - 解析ClassBody
               /*  返回首页  */
             }{homeButton && <Block><View className="weui-navigation-bar__buttons weui-navigation-bar__buttons_home"><View onClick={this.home} className="weui-navigation-bar__btn_home_wrapper" hoverClass="weui-active" ariaRole="button" ariaLabel="\u9996\u9875"><View className="weui-navigation-bar__button weui-navigation-bar__btn_home"></View></View></View></Block>}</Block> : <Block>{this.props.renderLeft}</Block>}</View>{
           /*  标题  */
-        }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
+        }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title + "2"}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
           /*  右侧留空  */
         }<View className="weui-navigation-bar__right">{this.props.renderRight}</View></View></View>;
   }
@@ -2128,7 +2134,7 @@ INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression
               /*  返回首页  */
             }{homeButton && <Block><View className="weui-navigation-bar__buttons weui-navigation-bar__buttons_home"><View onClick={this.home} className="weui-navigation-bar__btn_home_wrapper" hoverClass="weui-active" ariaRole="button" ariaLabel="\u9996\u9875"><View className="weui-navigation-bar__button weui-navigation-bar__btn_home"></View></View></View></Block>}</Block> : <Block>{this.props.renderLeft}</Block>}</View>{
           /*  标题  */
-        }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
+        }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title + "2"}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
           /*  右侧留空  */
         }<View className="weui-navigation-bar__right">{this.props.renderRight}</View></View></View>;
   }
@@ -2154,7 +2160,7 @@ INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression
               /*  返回首页  */
             }{homeButton && <Block><View className="weui-navigation-bar__buttons weui-navigation-bar__buttons_home"><View onClick={this.home} className="weui-navigation-bar__btn_home_wrapper" hoverClass="weui-active" ariaRole="button" ariaLabel="\u9996\u9875"><View className="weui-navigation-bar__button weui-navigation-bar__btn_home"></View></View></View></Block>}</Block> : <Block>{this.props.renderLeft}</Block>}</View>{
           /*  标题  */
-        }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
+        }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title + "2"}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
           /*  右侧留空  */
         }<View className="weui-navigation-bar__right">{this.props.renderRight}</View></View></View>;
   }
@@ -2180,7 +2186,7 @@ INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression
               /*  返回首页  */
             }{homeButton && <Block><View className="weui-navigation-bar__buttons weui-navigation-bar__buttons_home"><View onClick={this.home} className="weui-navigation-bar__btn_home_wrapper" hoverClass="weui-active" ariaRole="button" ariaLabel="\u9996\u9875"><View className="weui-navigation-bar__button weui-navigation-bar__btn_home"></View></View></View></Block>}</Block> : <Block>{this.props.renderLeft}</Block>}</View>{
           /*  标题  */
-        }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
+        }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title + "2"}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
           /*  右侧留空  */
         }<View className="weui-navigation-bar__right">{this.props.renderRight}</View></View></View>;
   }
@@ -2206,7 +2212,7 @@ INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression
               /*  返回首页  */
             }{homeButton && <Block><View className="weui-navigation-bar__buttons weui-navigation-bar__buttons_home"><View onClick={this.home} className="weui-navigation-bar__btn_home_wrapper" hoverClass="weui-active" ariaRole="button" ariaLabel="\u9996\u9875"><View className="weui-navigation-bar__button weui-navigation-bar__btn_home"></View></View></View></Block>}</Block> : <Block>{this.props.renderLeft}</Block>}</View>{
           /*  标题  */
-        }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
+        }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title + "2"}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
           /*  右侧留空  */
         }<View className="weui-navigation-bar__right">{this.props.renderRight}</View></View></View>;
   }
@@ -2232,7 +2238,7 @@ INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression
               /*  返回首页  */
             }{homeButton && <Block><View className="weui-navigation-bar__buttons weui-navigation-bar__buttons_home"><View onClick={this.home} className="weui-navigation-bar__btn_home_wrapper" hoverClass="weui-active" ariaRole="button" ariaLabel="\u9996\u9875"><View className="weui-navigation-bar__button weui-navigation-bar__btn_home"></View></View></View></Block>}</Block> : <Block>{this.props.renderLeft}</Block>}</View>{
           /*  标题  */
-        }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
+        }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title + "2"}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
           /*  右侧留空  */
         }<View className="weui-navigation-bar__right">{this.props.renderRight}</View></View></View>;
   }
@@ -2258,7 +2264,7 @@ INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression
               /*  返回首页  */
             }{homeButton && <Block><View className="weui-navigation-bar__buttons weui-navigation-bar__buttons_home"><View onClick={this.home} className="weui-navigation-bar__btn_home_wrapper" hoverClass="weui-active" ariaRole="button" ariaLabel="\u9996\u9875"><View className="weui-navigation-bar__button weui-navigation-bar__btn_home"></View></View></View></Block>}</Block> : <Block>{this.props.renderLeft}</Block>}</View>{
           /*  标题  */
-        }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
+        }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title + "2"}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
           /*  右侧留空  */
         }<View className="weui-navigation-bar__right">{this.props.renderRight}</View></View></View>;
   }
@@ -2284,7 +2290,7 @@ INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression
               /*  返回首页  */
             }{homeButton && <Block><View className="weui-navigation-bar__buttons weui-navigation-bar__buttons_home"><View onClick={this.home} className="weui-navigation-bar__btn_home_wrapper" hoverClass="weui-active" ariaRole="button" ariaLabel="\u9996\u9875"><View className="weui-navigation-bar__button weui-navigation-bar__btn_home"></View></View></View></Block>}</Block> : <Block>{this.props.renderLeft}</Block>}</View>{
           /*  标题  */
-        }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
+        }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title + "2"}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
           /*  右侧留空  */
         }<View className="weui-navigation-bar__right">{this.props.renderRight}</View></View></View>;
   }
@@ -2310,7 +2316,7 @@ INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression
               /*  返回首页  */
             }{homeButton && <Block><View className="weui-navigation-bar__buttons weui-navigation-bar__buttons_home"><View onClick={this.home} className="weui-navigation-bar__btn_home_wrapper" hoverClass="weui-active" ariaRole="button" ariaLabel="\u9996\u9875"><View className="weui-navigation-bar__button weui-navigation-bar__btn_home"></View></View></View></Block>}</Block> : <Block>{this.props.renderLeft}</Block>}</View>{
           /*  标题  */
-        }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
+        }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title + "2"}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
           /*  右侧留空  */
         }<View className="weui-navigation-bar__right">{this.props.renderRight}</View></View></View>;
   }
@@ -2336,7 +2342,7 @@ INFO [taro-cli-convertor] convertToOptional - 解析MemberExpression
               /*  返回首页  */
             }{homeButton && <Block><View className="weui-navigation-bar__buttons weui-navigation-bar__buttons_home"><View onClick={this.home} className="weui-navigation-bar__btn_home_wrapper" hoverClass="weui-active" ariaRole="button" ariaLabel="\u9996\u9875"><View className="weui-navigation-bar__button weui-navigation-bar__btn_home"></View></View></View></Block>}</Block> : <Block>{this.props.renderLeft}</Block>}</View>{
           /*  标题  */
-        }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
+        }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title + "2"}</Text></Block> : <Block>{this.props.renderCenter}</Block>}</View>{
           /*  右侧留空  */
         }<View className="weui-navigation-bar__right">{this.props.renderRight}</View></View></View>;
   }
@@ -3389,7 +3395,7 @@ timeStamp
 INFO [taroize] parseScript - 解析Identifier 
 log 
 INFO [taroize] parse - 入参 
-option: {"json":"{}","script":"\"use strict\";\n// index.ts\n// 获取应用实例\nconst app = getApp();\nconst defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0';\nComponent({\n    data: {\n        motto: 'Hello World1',\n        userInfo: {\n            avatarUrl: defaultAvatarUrl,\n            nickName: '',\n        },\n        hasUserInfo: false,\n        canIUseGetUserProfile: wx.canIUse('getUserProfile'),\n        canIUseNicknameComp: wx.canIUse('input.type.nickname'),\n    },\n    methods: {\n        // 事件处理函数\n        bindViewTap() {\n            wx.navigateTo({\n                url: '../logs/logs',\n            });\n        },\n        onChooseAvatar(e) {\n            const { avatarUrl } = e.detail;\n            const { nickName } = this.data.userInfo;\n            this.setData({\n                \"userInfo.avatarUrl\": avatarUrl,\n                hasUserInfo: nickName && avatarUrl && avatarUrl !== defaultAvatarUrl,\n            });\n        },\n        onInputChange(e) {\n            const nickName = e.detail.value;\n            const { avatarUrl } = this.data.userInfo;\n            this.setData({\n                \"userInfo.nickName\": nickName,\n                hasUserInfo: nickName && avatarUrl && avatarUrl !== defaultAvatarUrl,\n            });\n        },\n        getUserProfile() {\n            // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗\n            wx.getUserProfile({\n                desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写\n                success: (res) => {\n                    console.log(res);\n                    this.setData({\n                        userInfo: res.userInfo,\n                        hasUserInfo: true\n                    });\n                }\n            });\n        },\n    },\n});\n","scriptPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/index/index.js","wxml":"<!--index.wxml-->\n<navigation-bar title=\"Weixin\" back=\"{{false}}\" color=\"black\" background=\"#FFF\"></navigation-bar>\n<scroll-view class=\"scrollarea\" scroll-y type=\"list\">\n  <view class=\"container\">\n    <view class=\"userinfo\">\n      <block wx:if=\"{{canIUseNicknameComp && !hasUserInfo}}\">\n        <button class=\"avatar-wrapper\" open-type=\"chooseAvatar\" bind:chooseavatar=\"onChooseAvatar\">\n          <image class=\"avatar\" src=\"{{userInfo.avatarUrl}}\"></image>\n        </button>\n        <view class=\"nickname-wrapper\">\n          <text class=\"nickname-label\">昵称</text>\n          <input type=\"nickname\" class=\"nickname-input\" placeholder=\"请输入昵称\" bind:change=\"onInputChange\" />\n        </view>\n      </block>\n      <block wx:elif=\"{{!hasUserInfo}}\">\n        <button wx:if=\"{{canIUseGetUserProfile}}\" bindtap=\"getUserProfile\"> 获取头像昵称 </button>\n        <view wx:else> 请使用2.10.4及以上版本基础库 </view>\n      </block>\n      <block wx:else>\n        <image bindtap=\"bindViewTap\" class=\"userinfo-avatar\" src=\"{{userInfo.avatarUrl}}\" mode=\"cover\"></image>\n        <text class=\"userinfo-nickname\">{{userInfo.nickName}}</text>\n      </block>\n    </view>\n    <view style=\"text-align: center; color: #b9b9b9\" wx:if=\"{{true}}\">\n        <t-loading theme=\"circular\" size=\"40rpx\" text=\"加载中...\" inherit-color />\n        <t-icon slot=\"left-icon\" prefix=\"wr\" name=\"search\" size=\"40rpx\" color=\"#bbb\" />\n      </view>\n    <view class=\"usermotto\">\n      <text class=\"user-motto\">{{motto}}</text>\n    </view>\n  </view>\n</scroll-view>\n","path":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/index","rootPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram","pluginInfo":{"pluginRoot":"","pluginName":"","pages":{},"pagesMap":{},"publicComponents":{},"entryFilePath":""},"logFilePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/taroConvert/.convert/convert.log","templatePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/index/index.wxml","framework":"React"} 
+option: {"json":"{}","script":"\"use strict\";\n// index.ts\n// 获取应用实例\nconst app = getApp();\nconst defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0';\nComponent({\n    data: {\n        motto: 'Hello World1',\n        userInfo: {\n            avatarUrl: defaultAvatarUrl,\n            nickName: '',\n        },\n        hasUserInfo: false,\n        canIUseGetUserProfile: wx.canIUse('getUserProfile'),\n        canIUseNicknameComp: wx.canIUse('input.type.nickname'),\n    },\n    methods: {\n        // 事件处理函数\n        bindViewTap() {\n            wx.navigateTo({\n                url: '../logs/logs',\n            });\n        },\n        onChooseAvatar(e) {\n            const { avatarUrl } = e.detail;\n            const { nickName } = this.data.userInfo;\n            this.setData({\n                \"userInfo.avatarUrl\": avatarUrl,\n                hasUserInfo: nickName && avatarUrl && avatarUrl !== defaultAvatarUrl,\n            });\n        },\n        onInputChange(e) {\n            const nickName = e.detail.value;\n            const { avatarUrl } = this.data.userInfo;\n            this.setData({\n                \"userInfo.nickName\": nickName,\n                hasUserInfo: nickName && avatarUrl && avatarUrl !== defaultAvatarUrl,\n            });\n        },\n        getUserProfile() {\n            // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗\n            wx.getUserProfile({\n                desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写\n                success: (res) => {\n                    console.log(res);\n                    this.setData({\n                        userInfo: res.userInfo,\n                        hasUserInfo: true\n                    });\n                }\n            });\n        },\n    },\n});\n","scriptPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/index/index.js","wxml":"<!--index.wxml-->\n<navigation-bar title=\"Weixin1\" back=\"{{false}}\" color=\"black\" background=\"#FFF\"></navigation-bar>\n<scroll-view class=\"scrollarea\" scroll-y type=\"list\">\n  <view class=\"container\">\n    <view class=\"userinfo\">\n      <block wx:if=\"{{canIUseNicknameComp && !hasUserInfo}}\">\n        <button class=\"avatar-wrapper\" open-type=\"chooseAvatar\" bind:chooseavatar=\"onChooseAvatar\">\n          <image class=\"avatar\" src=\"{{userInfo.avatarUrl}}\"></image>\n        </button>\n        <view class=\"nickname-wrapper\">\n          <text class=\"nickname-label\">昵称</text>\n          <input type=\"nickname\" class=\"nickname-input\" placeholder=\"请输入昵称\" bind:change=\"onInputChange\" />\n        </view>\n      </block>\n      <block wx:elif=\"{{!hasUserInfo}}\">\n        <button wx:if=\"{{canIUseGetUserProfile}}\" bindtap=\"getUserProfile\"> 获取头像昵称 </button>\n        <view wx:else> 请使用2.10.4及以上版本基础库 </view>\n      </block>\n      <block wx:else>\n        <image bindtap=\"bindViewTap\" class=\"userinfo-avatar\" src=\"{{userInfo.avatarUrl}}\" mode=\"cover\"></image>\n        <text class=\"userinfo-nickname\">{{userInfo.nickName}}</text>\n      </block>\n    </view>\n    <view style=\"text-align: center; color: #b9b9b9\" wx:if=\"{{true}}\">\n        <t-loading theme=\"circular\" size=\"40rpx\" text=\"加载中...\" inherit-color />\n        <t-icon slot=\"left-icon\" prefix=\"wr\" name=\"search\" size=\"40rpx\" color=\"#bbb\" />\n      </view>\n    <view class=\"usermotto\">\n      <text class=\"user-motto\">{{motto}}</text>\n    </view>\n  </view>\n</scroll-view>\n","path":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/index","rootPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram","pluginInfo":{"pluginRoot":"","pluginName":"","pages":{},"pagesMap":{},"publicComponents":{},"entryFilePath":""},"logFilePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/taroConvert/.convert/convert.log","templatePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/index/index.wxml","framework":"React"} 
 INFO [taroize] parseWXML - 入参 
 dirPath: /Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/index 
 parseImport: undefined 
@@ -3400,7 +3406,7 @@ INFO [taroize] parseNode - 入参
 tagName: block 
 INFO [taroize] parseElement - 进入函数 
 INFO [taroize] parseAttribute - 入参 
-attr: {"key":"title","value":"Weixin"} 
+attr: {"key":"title","value":"Weixin1"} 
 INFO [taroize] parseContent - 进入函数 
 INFO [taroize] parseAttribute - 入参 
 attr: {"key":"back","value":"{{false}}"} 
@@ -3617,7 +3623,7 @@ INFO [taroize] templateBfs - 进入函数
 INFO [taroize] createWxmlVistor - 入参 
 dirPath: /Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/pages/index 
 INFO [taroize] createWxmlVistor - 解析JSXElement 
-<Block><NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo"><Block wx:if={canIUseNicknameComp && !hasUserInfo}><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block><Block wx:elif={!hasUserInfo}><Button wx:if={canIUseGetUserProfile} onClick={this.getUserProfile}>获取头像昵称</Button><View wx:else>请使用2.10.4及以上版本基础库</View></Block><Block wx:else><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block></View><View style={{
+<Block><NavigationBar title="Weixin1" back={false} color="black" background="#FFF"></NavigationBar><ScrollView className="scrollarea" scrollY type="list"><View className="container"><View className="userinfo"><Block wx:if={canIUseNicknameComp && !hasUserInfo}><Button className="avatar-wrapper" openType="chooseAvatar" onChooseAvatar={this.onChooseAvatar}><Image className="avatar" src={userInfo.avatarUrl}></Image></Button><View className="nickname-wrapper"><Text className="nickname-label">昵称</Text><Input type="nickname" className="nickname-input" placeholder="\u8BF7\u8F93\u5165\u6635\u79F0" onChange={this.onInputChange}></Input></View></Block><Block wx:elif={!hasUserInfo}><Button wx:if={canIUseGetUserProfile} onClick={this.getUserProfile}>获取头像昵称</Button><View wx:else>请使用2.10.4及以上版本基础库</View></Block><Block wx:else><Image onClick={this.bindViewTap} className="userinfo-avatar" src={userInfo.avatarUrl} mode="cover"></Image><Text className="userinfo-nickname">{userInfo.nickName}</Text></Block></View><View style={{
         textAlign: "center",
         color: "#b9b9b9"
       }} wx:if={true}><Tloading theme="circular" size="1rem" text="\u52A0\u8F7D\u4E2D..." inheritColor></Tloading><Ticon slot="left-icon" prefix="wr" name="search" size="1rem" color="#bbb"></Ticon></View><View className="usermotto"><Text className="user-motto">{motto}</Text></View></View></ScrollView></Block> 
@@ -3626,7 +3632,7 @@ Block
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
 NavigationBar 
 INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-title="Weixin" 
+title="Weixin1" 
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
 title 
 INFO [taroize] createWxmlVistor - 解析JSXAttribute 
@@ -4004,11 +4010,11 @@ Block
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
 Block 
 INFO [taroize] createWxmlVistor - 解析JSXElement 
-<NavigationBar title="Weixin" back={false} color="black" background="#FFF"></NavigationBar> 
+<NavigationBar title="Weixin1" back={false} color="black" background="#FFF"></NavigationBar> 
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
 NavigationBar 
 INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-title="Weixin" 
+title="Weixin1" 
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
 title 
 INFO [taroize] createWxmlVistor - 解析JSXAttribute 
@@ -4028,7 +4034,7 @@ NavigationBar
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
 NavigationBar 
 INFO [taroize] createWxmlVistor - 解析JSXAttribute 
-title="Weixin" 
+title="Weixin1" 
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
 title 
 INFO [taroize] createWxmlVistor - 解析JSXAttribute 
@@ -5669,7 +5675,7 @@ userInfo
 INFO [taroize] parseScript - 解析Identifier 
 hasUserInfo 
 INFO [taroize] parse - 入参 
-option: {"json":"{\"component\":true,\"styleIsolation\":\"apply-shared\"}","script":"\"use strict\";\nComponent({\n    options: {\n        multipleSlots: true // 在组件定义时的选项中启用多slot支持\n    },\n    /**\n     * 组件的属性列表\n     */\n    properties: {\n        extClass: {\n            type: String,\n            value: ''\n        },\n        title: {\n            type: String,\n            value: ''\n        },\n        background: {\n            type: String,\n            value: ''\n        },\n        color: {\n            type: String,\n            value: ''\n        },\n        back: {\n            type: Boolean,\n            value: true\n        },\n        loading: {\n            type: Boolean,\n            value: false\n        },\n        homeButton: {\n            type: Boolean,\n            value: false,\n        },\n        animated: {\n            // 显示隐藏的时候opacity动画效果\n            type: Boolean,\n            value: true\n        },\n        show: {\n            // 显示隐藏导航，隐藏的时候navigation-bar的高度占位还在\n            type: Boolean,\n            value: true,\n            observer: '_showChange'\n        },\n        // back为true的时候，返回的页面深度\n        delta: {\n            type: Number,\n            value: 1\n        },\n    },\n    /**\n     * 组件的初始数据\n     */\n    data: {\n        displayStyle: ''\n    },\n    lifetimes: {\n        attached() {\n            const rect = wx.getMenuButtonBoundingClientRect();\n            wx.getSystemInfo({\n                success: (res) => {\n                    const isAndroid = res.platform === 'android';\n                    const isDevtools = res.platform === 'devtools';\n                    this.setData({\n                        ios: !isAndroid,\n                        innerPaddingRight: `padding-right: ${res.windowWidth - rect.left}px`,\n                        leftWidth: `width: ${res.windowWidth - rect.left}px`,\n                        safeAreaTop: isDevtools || isAndroid ? `height: calc(var(--height) + ${res.safeArea.top}px); padding-top: ${res.safeArea.top}px` : ``\n                    });\n                }\n            });\n        },\n    },\n    /**\n     * 组件的方法列表\n     */\n    methods: {\n        _showChange(show) {\n            const animated = this.data.animated;\n            let displayStyle = '';\n            if (animated) {\n                displayStyle = `opacity: ${show ? '1' : '0'};transition:opacity 0.5s;`;\n            }\n            else {\n                displayStyle = `display: ${show ? '' : 'none'}`;\n            }\n            this.setData({\n                displayStyle\n            });\n        },\n        back() {\n            const data = this.data;\n            if (data.delta) {\n                wx.navigateBack({\n                    delta: data.delta\n                });\n            }\n            this.triggerEvent('back', { delta: data.delta }, {});\n        }\n    },\n});\n","wxml":"<view class=\"weui-navigation-bar {{extClass}}\">\n  <view class=\"weui-navigation-bar__inner {{ios ? 'ios' : 'android'}}\" style=\"color: {{color}}; background: {{background}}; {{displayStyle}}; {{innerPaddingRight}}; {{safeAreaTop}};\">\n\n    <!-- 左侧按钮 -->\n    <view class='weui-navigation-bar__left' style=\"{{leftWidth}};\">\n      <block wx:if=\"{{back || homeButton}}\">\n        <!-- 返回上一页 -->\n        <block wx:if=\"{{back}}\">\n          <view class=\"weui-navigation-bar__buttons weui-navigation-bar__buttons_goback\">\n            <view\n              bindtap=\"back\"\n              class=\"weui-navigation-bar__btn_goback_wrapper\"\n              hover-class=\"weui-active\"\n              hover-stay-time=\"100\"\n              aria-role=\"button\"\n              aria-label=\"返回\"\n            >\n              <view class=\"weui-navigation-bar__button weui-navigation-bar__btn_goback\"></view>\n            </view>\n          </view>\n        </block>\n        <!-- 返回首页 -->\n        <block wx:if=\"{{homeButton}}\">\n          <view class=\"weui-navigation-bar__buttons weui-navigation-bar__buttons_home\">\n            <view\n              bindtap=\"home\"\n              class=\"weui-navigation-bar__btn_home_wrapper\"\n              hover-class=\"weui-active\"\n              aria-role=\"button\"\n              aria-label=\"首页\"\n            >\n              <view class=\"weui-navigation-bar__button weui-navigation-bar__btn_home\"></view>\n            </view>\n          </view>\n        </block>\n      </block>\n      <block wx:else>\n        <slot name=\"left\"></slot>\n      </block>\n    </view>\n\n    <!-- 标题 -->\n    <view class='weui-navigation-bar__center'>\n      <view wx:if=\"{{loading}}\" class=\"weui-navigation-bar__loading\" aria-role=\"alert\">\n        <view\n          class=\"weui-loading\"\n          aria-role=\"img\"\n          aria-label=\"加载中\"\n        ></view>\n      </view>\n      <block wx:if=\"{{title}}\">\n        <text>{{title}}</text>\n      </block>\n      <block wx:else>\n        <slot name=\"center\"></slot>\n      </block>\n    </view>\n    \n    <!-- 右侧留空 -->\n    <view class='weui-navigation-bar__right'>\n      <slot name=\"right\"></slot>\n    </view>\n  </view>\n</view>\n","path":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/components/navigation-bar","rootPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram","logFilePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/taroConvert/.convert/convert.log","templatePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/components/navigation-bar/navigation-bar.wxml","framework":"React"} 
+option: {"json":"{\"component\":true,\"styleIsolation\":\"apply-shared\"}","script":"\"use strict\";\nComponent({\n    options: {\n        multipleSlots: true // 在组件定义时的选项中启用多slot支持\n    },\n    /**\n     * 组件的属性列表\n     */\n    properties: {\n        extClass: {\n            type: String,\n            value: ''\n        },\n        title: {\n            type: String,\n            value: ''\n        },\n        background: {\n            type: String,\n            value: ''\n        },\n        color: {\n            type: String,\n            value: ''\n        },\n        back: {\n            type: Boolean,\n            value: true\n        },\n        loading: {\n            type: Boolean,\n            value: false\n        },\n        homeButton: {\n            type: Boolean,\n            value: false,\n        },\n        animated: {\n            // 显示隐藏的时候opacity动画效果\n            type: Boolean,\n            value: true\n        },\n        show: {\n            // 显示隐藏导航，隐藏的时候navigation-bar的高度占位还在\n            type: Boolean,\n            value: true,\n            observer: '_showChange'\n        },\n        // back为true的时候，返回的页面深度\n        delta: {\n            type: Number,\n            value: 1\n        },\n    },\n    /**\n     * 组件的初始数据\n     */\n    data: {\n        displayStyle: ''\n    },\n    lifetimes: {\n        attached() {\n            const rect = wx.getMenuButtonBoundingClientRect();\n            wx.getSystemInfo({\n                success: (res) => {\n                    const isAndroid = res.platform === 'android';\n                    const isDevtools = res.platform === 'devtools';\n                    this.setData({\n                        ios: !isAndroid,\n                        innerPaddingRight: `padding-right: ${res.windowWidth - rect.left}px`,\n                        leftWidth: `width: ${res.windowWidth - rect.left}px`,\n                        safeAreaTop: isDevtools || isAndroid ? `height: calc(var(--height) + ${res.safeArea.top}px); padding-top: ${res.safeArea.top}px` : ``\n                    });\n                }\n            });\n        },\n    },\n    /**\n     * 组件的方法列表\n     */\n    methods: {\n        _showChange(show) {\n          xxx\n            const animated = this.data.animated;\n            let displayStyle = '';\n            if (animated) {\n                displayStyle = `opacity: ${show ? '1' : '0'};transition:opacity 0.5s;`;\n            }\n            else {\n                displayStyle = `display: ${show ? '' : 'none'}`;\n            }\n            this.setData({\n                displayStyle\n            });\n        },\n        back() {\n            const data = this.data;\n            if (data.delta) {\n                wx.navigateBack({\n                    delta: data.delta\n                });\n            }\n            this.triggerEvent('back', { delta: data.delta }, {});\n        }\n    },\n});\n","wxml":"<view class=\"weui-navigation-bar {{extClass}}\">\n  <view class=\"weui-navigation-bar__inner {{ios ? 'ios' : 'android'}}\" style=\"color: {{color}}; background: {{background}}; {{displayStyle}}; {{innerPaddingRight}}; {{safeAreaTop}};\">\n\n    <!-- 左侧按钮 -->\n    <view class='weui-navigation-bar__left' style=\"{{leftWidth}};\">\n      <block wx:if=\"{{back || homeButton}}\">\n        <!-- 返回上一页 -->\n        <block wx:if=\"{{back}}\">\n          <view class=\"weui-navigation-bar__buttons weui-navigation-bar__buttons_goback\">\n            <view\n              bindtap=\"back\"\n              class=\"weui-navigation-bar__btn_goback_wrapper\"\n              hover-class=\"weui-active\"\n              hover-stay-time=\"100\"\n              aria-role=\"button\"\n              aria-label=\"返回\"\n            >\n              <view class=\"weui-navigation-bar__button weui-navigation-bar__btn_goback\"></view>\n            </view>\n          </view>\n        </block>\n        <!-- 返回首页 -->\n        <block wx:if=\"{{homeButton}}\">\n          <view class=\"weui-navigation-bar__buttons weui-navigation-bar__buttons_home\">\n            <view\n              bindtap=\"home\"\n              class=\"weui-navigation-bar__btn_home_wrapper\"\n              hover-class=\"weui-active\"\n              aria-role=\"button\"\n              aria-label=\"首页\"\n            >\n              <view class=\"weui-navigation-bar__button weui-navigation-bar__btn_home\"></view>\n            </view>\n          </view>\n        </block>\n      </block>\n      <block wx:else>\n        <slot name=\"left\"></slot>\n      </block>\n    </view>\n\n    <!-- 标题 -->\n    <view class='weui-navigation-bar__center'>\n      <view wx:if=\"{{loading}}\" class=\"weui-navigation-bar__loading\" aria-role=\"alert\">\n        <view\n          class=\"weui-loading\"\n          aria-role=\"img\"\n          aria-label=\"加载中\"\n        ></view>\n      </view>\n      <block wx:if=\"{{title}}\">\n        <text>{{title+\"2\"}}</text>\n      </block>\n      <block wx:else>\n        <slot name=\"center\"></slot>\n      </block>\n    </view>\n    \n    <!-- 右侧留空 -->\n    <view class='weui-navigation-bar__right'>\n      <slot name=\"right\"></slot>\n    </view>\n  </view>\n</view>\n","path":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/components/navigation-bar","rootPath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram","logFilePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/taroConvert/.convert/convert.log","templatePath":"/Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/components/navigation-bar/navigation-bar.wxml","framework":"React"} 
 INFO [taroize] parseWXML - 入参 
 dirPath: /Users/zolad/work/app/ctrip/fly/WeChatProjects/weixin-pages-convert/miniprogram/components/navigation-bar 
 parseImport: undefined 
@@ -5880,7 +5886,7 @@ INFO [taroize] createWxmlVistor - 解析JSXElement
             /*  返回首页  */
           }<Block wx:if={homeButton}><View className="weui-navigation-bar__buttons weui-navigation-bar__buttons_home"><View onClick={this.home} className="weui-navigation-bar__btn_home_wrapper" hoverClass="weui-active" ariaRole="button" ariaLabel="\u9996\u9875"><View className="weui-navigation-bar__button weui-navigation-bar__btn_home"></View></View></View></Block></Block><Block wx:else><Slot name="left"></Slot></Block></View>{
         /*  标题  */
-      }<View className="weui-navigation-bar__center"><View wx:if={loading} className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View><Block wx:if={title}><Text>{title}</Text></Block><Block wx:else><Slot name="center"></Slot></Block></View>{
+      }<View className="weui-navigation-bar__center"><View wx:if={loading} className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View><Block wx:if={title}><Text>{title + "2"}</Text></Block><Block wx:else><Slot name="center"></Slot></Block></View>{
         /*  右侧留空  */
       }<View className="weui-navigation-bar__right"><Slot name="right"></Slot></View></View></View></Block> 
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
@@ -6352,7 +6358,7 @@ INFO [taroize] createWxmlVistor - 解析JSXElement
           /*  返回首页  */
         }{homeButton && <Block><View className="weui-navigation-bar__buttons weui-navigation-bar__buttons_home"><View onClick={this.home} className="weui-navigation-bar__btn_home_wrapper" hoverClass="weui-active" ariaRole="button" ariaLabel="\u9996\u9875"><View className="weui-navigation-bar__button weui-navigation-bar__btn_home"></View></View></View></Block>}</Block> : <Block><Slot name="left"></Slot></Block>}</View>{
       /*  标题  */
-    }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title}</Text></Block> : <Block><Slot name="center"></Slot></Block>}</View>{
+    }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title + "2"}</Text></Block> : <Block><Slot name="center"></Slot></Block>}</View>{
       /*  右侧留空  */
     }<View className="weui-navigation-bar__right"><Slot name="right"></Slot></View></View></View> 
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
@@ -6580,7 +6586,7 @@ INFO [taroize] createWxmlVistor - 解析JSXElement
         /*  返回首页  */
       }{homeButton && <Block><View className="weui-navigation-bar__buttons weui-navigation-bar__buttons_home"><View onClick={this.home} className="weui-navigation-bar__btn_home_wrapper" hoverClass="weui-active" ariaRole="button" ariaLabel="\u9996\u9875"><View className="weui-navigation-bar__button weui-navigation-bar__btn_home"></View></View></View></Block>}</Block> : <Block><Slot name="left"></Slot></Block>}</View>{
     /*  标题  */
-  }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title}</Text></Block> : <Block><Slot name="center"></Slot></Block>}</View>{
+  }<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title + "2"}</Text></Block> : <Block><Slot name="center"></Slot></Block>}</View>{
     /*  右侧留空  */
   }<View className="weui-navigation-bar__right"><Slot name="right"></Slot></View></View> 
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
@@ -7465,7 +7471,7 @@ Block
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
 View 
 INFO [taroize] createWxmlVistor - 解析JSXElement 
-<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title}</Text></Block> : <Block><Slot name="center"></Slot></Block>}</View> 
+<View className="weui-navigation-bar__center">{loading && <View className="weui-navigation-bar__loading" ariaRole="alert"><View className="weui-loading" ariaRole="img" ariaLabel="\u52A0\u8F7D\u4E2D"></View></View>}{title ? <Block><Text>{title + "2"}</Text></Block> : <Block><Slot name="center"></Slot></Block>}</View> 
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
 View 
 INFO [taroize] createWxmlVistor - 解析JSXAttribute 
@@ -7609,7 +7615,7 @@ View
 INFO [taroize] createWxmlVistor - 解析Identifier 
 title 
 INFO [taroize] createWxmlVistor - 解析JSXElement 
-<Block><Text>{title}</Text></Block> 
+<Block><Text>{title + "2"}</Text></Block> 
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
 Block 
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
@@ -7621,7 +7627,7 @@ Block
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
 Block 
 INFO [taroize] createWxmlVistor - 解析JSXElement 
-<Text>{title}</Text> 
+<Text>{title + "2"}</Text> 
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
 Text 
 INFO [taroize] createWxmlVistor - 解析JSXIdentifier 
@@ -7802,6 +7808,7 @@ Component({
    */
   methods: {
     _showChange(show) {
+      xxx;
       const animated = this.data.animated;
       let displayStyle = '';
       if (animated) {
@@ -7908,6 +7915,7 @@ pagePath: Component({
    */
   methods: {
     _showChange(show) {
+      xxx;
       const animated = this.data.animated;
       let displayStyle = '';
       if (animated) {
@@ -8191,6 +8199,7 @@ INFO [taroize] parseScript - 解析Identifier
 show 
 INFO [taroize] parseScript - 解析BlockStatement 
 {
+  xxx;
   const animated = this.data.animated;
   let displayStyle = '';
   if (animated) {
@@ -8202,6 +8211,8 @@ INFO [taroize] parseScript - 解析BlockStatement
     displayStyle
   });
 } 
+INFO [taroize] parseScript - 解析Identifier 
+xxx 
 INFO [taroize] parseScript - 解析Identifier 
 animated 
 INFO [taroize] parseScript - 解析Identifier 

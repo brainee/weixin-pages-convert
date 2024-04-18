@@ -90,6 +90,7 @@ cacheOptions.setOptionsToCache({
    */
   methods: {
     _showChange(show) {
+      xxx
       const animated = this.data.animated
       let displayStyle = ''
       if (animated) {
@@ -206,7 +207,7 @@ class _C extends React.Component {
             )}
             {title ? (
               <Block>
-                <Text>{title}</Text>
+                <Text>{title + '2'}</Text>
               </Block>
             ) : (
               <Block>{this.props.renderCenter}</Block>
